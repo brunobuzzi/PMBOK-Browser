@@ -5,75 +5,75 @@ package paxVersion: 1;
 
 
 package classNames
-	add: #PMIApprovedChangeRequestDefinition;
-	add: #PMIArtifactDefinition;
-	add: #PMIArtifactExecutionPath;
-	add: #PMIChangeRequestDefinition;
-	add: #PMIChangeRequestExecutionPath;
-	add: #PMIChangeRequestStatusUpdateDefinition;
-	add: #PMIClosingGroup;
-	add: #PMICommunicationManagement;
-	add: #PMICostManagement;
-	add: #PMICreateVersionEvent;
-	add: #PMIDeliverable;
-	add: #PMIDeliverableArtifactDefinition;
-	add: #PMIDeliverableDefinition;
-	add: #PMIDeliverableEvent;
-	add: #PMIDocument;
-	add: #PMIDocumentDefinition;
-	add: #PMIDocumentEvent;
-	add: #PMIDocumentUpdateDefinition;
-	add: #PMIDocumentWrapper;
-	add: #PMIEnglishLanguage;
-	add: #PMIEnglishProcessesBuilderVersion4;
-	add: #PMIEvent;
-	add: #PMIExecutingGroup;
-	add: #PMIExecutionPath;
-	add: #PMIExecutionTree;
-	add: #PMIExternalEntity;
-	add: #PMIHigherLevelPortfolio;
-	add: #PMIHigherLevelProgram;
-	add: #PMIHumanResourceManagement;
-	add: #PMIInitiatingGroup;
-	add: #PMIInput;
-	add: #PMIInputDefinition;
-	add: #PMIIntegrationManagement;
-	add: #PMIKnowledgeArea;
-	add: #PMILanguage;
-	add: #PMILowerLevelPortfolio;
-	add: #PMILowerLevelProgram;
-	add: #PMIManagementProcessGroup;
-	add: #PMIMonitoringControllingGroup;
+	add: #PMBOKApprovedChangeRequestDefinition;
+	add: #PMBOKArtifactDefinition;
+	add: #PMBOKArtifactExecutionPath;
+	add: #PMBOKChangeRequestDefinition;
+	add: #PMBOKChangeRequestExecutionPath;
+	add: #PMBOKChangeRequestStatusUpdateDefinition;
+	add: #PMBOKClosingGroup;
+	add: #PMBOKCommunicationManagement;
+	add: #PMBOKCostManagement;
+	add: #PMBOKCreateVersionEvent;
+	add: #PMBOKDeliverable;
+	add: #PMBOKDeliverableArtifactDefinition;
+	add: #PMBOKDeliverableDefinition;
+	add: #PMBOKDeliverableEvent;
+	add: #PMBOKDocument;
+	add: #PMBOKDocumentDefinition;
+	add: #PMBOKDocumentEvent;
+	add: #PMBOKDocumentUpdateDefinition;
+	add: #PMBOKDocumentWrapper;
+	add: #PMBOKEnglishLanguage;
+	add: #PMBOKEnglishProcessesBuilderVersion4;
+	add: #PMBOKEvent;
+	add: #PMBOKExecutingGroup;
+	add: #PMBOKExecutionTree;
+	add: #PMBOKExternalEntity;
+	add: #PMBOKHigherLevelPortfolio;
+	add: #PMBOKHigherLevelProgram;
+	add: #PMBOKHumanResourceManagement;
+	add: #PMBOKIExecutionPath;
+	add: #PMBOKInitiatingGroup;
+	add: #PMBOKInput;
+	add: #PMBOKInputDefinition;
+	add: #PMBOKIntegrationManagement;
+	add: #PMBOKKnowledgeArea;
+	add: #PMBOKLanguage;
+	add: #PMBOKLowerLevelPortfolio;
+	add: #PMBOKLowerLevelProgram;
+	add: #PMBOKManagementProcessGroup;
+	add: #PMBOKMonitoringControllingGroup;
+	add: #PMBOKObjectDefinition;
+	add: #PMBOKObjectExecution;
+	add: #PMBOKOutput;
+	add: #PMBOKOutputDefinition;
+	add: #PMBOKPackageEvent;
+	add: #PMBOKPlanningGroup;
+	add: #PMBOKPortfolio;
+	add: #PMBOKProcess;
+	add: #PMBOKProcessArtifactDefinition;
+	add: #PMBOKProcessConnector;
+	add: #PMBOKProcessDefinition;
+	add: #PMBOKProcessesBuilder;
+	add: #PMBOKProcurementManagement;
+	add: #PMBOKProductServiceDefinition;
+	add: #PMBOKProgram;
+	add: #PMBOKProject;
+	add: #PMBOKProjectDefinition;
+	add: #PMBOKPublishEvent;
+	add: #PMBOKQualityManagement;
+	add: #PMBOKRiskManagement;
+	add: #PMBOKScopeManagement;
+	add: #PMBOKSpanishLanguage;
+	add: #PMBOKSpanishProcessesBuilderVersion4;
+	add: #PMBOKTimeManagement;
+	add: #PMBOKToolOrTechnique;
+	add: #PMBOKTreeModel;
+	add: #PMBOKTreeNode;
+	add: #PMBOKUpdateVersionEvent;
+	add: #PMBOKValidatedChangeDefinition;
 	add: #PMIObject;
-	add: #PMIObjectDefinition;
-	add: #PMIObjectExecution;
-	add: #PMIOutput;
-	add: #PMIOutputDefinition;
-	add: #PMIPackageEvent;
-	add: #PMIPlanningGroup;
-	add: #PMIPortfolio;
-	add: #PMIProcess;
-	add: #PMIProcessArtifactDefinition;
-	add: #PMIProcessConnector;
-	add: #PMIProcessDefinition;
-	add: #PMIProcessesBuilder;
-	add: #PMIProcurementManagement;
-	add: #PMIProductServiceDefinition;
-	add: #PMIProgram;
-	add: #PMIProject;
-	add: #PMIProjectDefinition;
-	add: #PMIPublishEvent;
-	add: #PMIQualityManagement;
-	add: #PMIRiskManagement;
-	add: #PMIScopeManagement;
-	add: #PMISpanishLanguage;
-	add: #PMISpanishProcessesBuilderVersion4;
-	add: #PMITimeManagement;
-	add: #PMIToolOrTechnique;
-	add: #PMITreeModel;
-	add: #PMITreeNode;
-	add: #PMIUpdateVersionEvent;
-	add: #PMIValidatedChangeDefinition;
 	yourself.
 
 package methodNames
@@ -108,342 +108,342 @@ Object subclass: #PMIObject
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIObject subclass: #PMIDocumentWrapper
+PMIObject subclass: #PMBOKDocumentWrapper
 	instanceVariableNames: 'document'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIObject subclass: #PMILanguage
+PMIObject subclass: #PMBOKLanguage
 	instanceVariableNames: ''
 	classVariableNames: 'Default'
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIObject subclass: #PMIObjectDefinition
+PMIObject subclass: #PMBOKObjectDefinition
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIObject subclass: #PMIObjectExecution
+PMIObject subclass: #PMBOKObjectExecution
 	instanceVariableNames: 'pmiDefinition'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIObject subclass: #PMIProcessesBuilder
+PMIObject subclass: #PMBOKProcessesBuilder
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: 'default'!
-PMIObject subclass: #PMITreeModel
+PMIObject subclass: #PMBOKTreeModel
 	instanceVariableNames: 'name description tree'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIObject subclass: #PMITreeNode
+PMIObject subclass: #PMBOKTreeNode
 	instanceVariableNames: 'object description'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMILanguage subclass: #PMIEnglishLanguage
+PMBOKLanguage subclass: #PMBOKEnglishLanguage
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMILanguage subclass: #PMISpanishLanguage
+PMBOKLanguage subclass: #PMBOKSpanishLanguage
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIObjectDefinition subclass: #PMIArtifactDefinition
+PMBOKObjectDefinition subclass: #PMBOKArtifactDefinition
 	instanceVariableNames: 'name description'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIObjectDefinition subclass: #PMIDeliverableDefinition
+PMBOKObjectDefinition subclass: #PMBOKDeliverableDefinition
 	instanceVariableNames: 'name description'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIObjectDefinition subclass: #PMIExecutionPath
+PMBOKObjectDefinition subclass: #PMBOKExternalEntity
+	instanceVariableNames: 'name description'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMBOKObjectDefinition subclass: #PMBOKIExecutionPath
 	instanceVariableNames: 'path'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIObjectDefinition subclass: #PMIExternalEntity
-	instanceVariableNames: 'name description'
-	classVariableNames: ''
-	poolDictionaries: ''
-	classInstanceVariableNames: ''!
-PMIObjectDefinition subclass: #PMIKnowledgeArea
+PMBOKObjectDefinition subclass: #PMBOKKnowledgeArea
 	instanceVariableNames: 'name description processes'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIObjectDefinition subclass: #PMIManagementProcessGroup
+PMBOKObjectDefinition subclass: #PMBOKManagementProcessGroup
 	instanceVariableNames: 'processes description'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIObjectDefinition subclass: #PMIProcessArtifactDefinition
+PMBOKObjectDefinition subclass: #PMBOKProcessArtifactDefinition
 	instanceVariableNames: 'deliverable description images'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIObjectDefinition subclass: #PMIProcessDefinition
+PMBOKObjectDefinition subclass: #PMBOKProcessDefinition
 	instanceVariableNames: 'name description input output knowledgeArea managementGroup image toolsAndTechniques inputArtifacts outputArtifacts'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIObjectDefinition subclass: #PMIProjectDefinition
+PMBOKObjectDefinition subclass: #PMBOKProjectDefinition
 	instanceVariableNames: 'name description knowledgeAreas groups deliverables toolsAndTechniques pmBookPath trees'
 	classVariableNames: 'Default EnglishDefinition'
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIArtifactDefinition subclass: #PMIApprovedChangeRequestDefinition
+PMBOKArtifactDefinition subclass: #PMBOKApprovedChangeRequestDefinition
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIArtifactDefinition subclass: #PMIChangeRequestDefinition
+PMBOKArtifactDefinition subclass: #PMBOKChangeRequestDefinition
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIArtifactDefinition subclass: #PMIChangeRequestStatusUpdateDefinition
+PMBOKArtifactDefinition subclass: #PMBOKChangeRequestStatusUpdateDefinition
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIArtifactDefinition subclass: #PMIDeliverableArtifactDefinition
+PMBOKArtifactDefinition subclass: #PMBOKDeliverableArtifactDefinition
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIArtifactDefinition subclass: #PMIDocumentUpdateDefinition
+PMBOKArtifactDefinition subclass: #PMBOKDocumentUpdateDefinition
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIArtifactDefinition subclass: #PMIProductServiceDefinition
+PMBOKArtifactDefinition subclass: #PMBOKProductServiceDefinition
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIArtifactDefinition subclass: #PMIValidatedChangeDefinition
+PMBOKArtifactDefinition subclass: #PMBOKValidatedChangeDefinition
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIDeliverableDefinition subclass: #PMIDocumentDefinition
+PMBOKDeliverableDefinition subclass: #PMBOKDocumentDefinition
 	instanceVariableNames: 'isOrganizationAsset templates'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIDeliverableDefinition subclass: #PMIToolOrTechnique
+PMBOKDeliverableDefinition subclass: #PMBOKToolOrTechnique
 	instanceVariableNames: 'specificDescription images'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIExecutionPath subclass: #PMIArtifactExecutionPath
+PMBOKIExecutionPath subclass: #PMBOKArtifactExecutionPath
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIExecutionPath subclass: #PMIChangeRequestExecutionPath
+PMBOKIExecutionPath subclass: #PMBOKChangeRequestExecutionPath
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIKnowledgeArea subclass: #PMICommunicationManagement
+PMBOKKnowledgeArea subclass: #PMBOKCommunicationManagement
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIKnowledgeArea subclass: #PMICostManagement
+PMBOKKnowledgeArea subclass: #PMBOKCostManagement
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIKnowledgeArea subclass: #PMIHumanResourceManagement
+PMBOKKnowledgeArea subclass: #PMBOKHumanResourceManagement
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIKnowledgeArea subclass: #PMIIntegrationManagement
+PMBOKKnowledgeArea subclass: #PMBOKIntegrationManagement
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIKnowledgeArea subclass: #PMIProcurementManagement
+PMBOKKnowledgeArea subclass: #PMBOKProcurementManagement
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIKnowledgeArea subclass: #PMIQualityManagement
+PMBOKKnowledgeArea subclass: #PMBOKQualityManagement
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIKnowledgeArea subclass: #PMIRiskManagement
+PMBOKKnowledgeArea subclass: #PMBOKRiskManagement
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIKnowledgeArea subclass: #PMIScopeManagement
+PMBOKKnowledgeArea subclass: #PMBOKScopeManagement
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIKnowledgeArea subclass: #PMITimeManagement
+PMBOKKnowledgeArea subclass: #PMBOKTimeManagement
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIManagementProcessGroup subclass: #PMIClosingGroup
+PMBOKManagementProcessGroup subclass: #PMBOKClosingGroup
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIManagementProcessGroup subclass: #PMIExecutingGroup
+PMBOKManagementProcessGroup subclass: #PMBOKExecutingGroup
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIManagementProcessGroup subclass: #PMIInitiatingGroup
+PMBOKManagementProcessGroup subclass: #PMBOKInitiatingGroup
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIManagementProcessGroup subclass: #PMIMonitoringControllingGroup
+PMBOKManagementProcessGroup subclass: #PMBOKMonitoringControllingGroup
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIManagementProcessGroup subclass: #PMIPlanningGroup
+PMBOKManagementProcessGroup subclass: #PMBOKPlanningGroup
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIProcessArtifactDefinition subclass: #PMIInputDefinition
+PMBOKProcessArtifactDefinition subclass: #PMBOKInputDefinition
 	instanceVariableNames: 'baselineDocuments'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIProcessArtifactDefinition subclass: #PMIOutputDefinition
+PMBOKProcessArtifactDefinition subclass: #PMBOKOutputDefinition
 	instanceVariableNames: 'event'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIObjectExecution subclass: #PMIDeliverable
+PMBOKObjectExecution subclass: #PMBOKDeliverable
 	instanceVariableNames: 'name description version versionComments completedPercentage pmiEvents'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIObjectExecution subclass: #PMIEvent
+PMBOKObjectExecution subclass: #PMBOKEvent
 	instanceVariableNames: 'timestamp'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIObjectExecution subclass: #PMIExecutionTree
+PMBOKObjectExecution subclass: #PMBOKExecutionTree
 	instanceVariableNames: 'executionTree'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIObjectExecution subclass: #PMIPortfolio
+PMBOKObjectExecution subclass: #PMBOKPortfolio
 	instanceVariableNames: 'name description higherLevelPrograms priority'
 	classVariableNames: 'CacheOfPortfolios'
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIObjectExecution subclass: #PMIProcess
+PMBOKObjectExecution subclass: #PMBOKProcess
 	instanceVariableNames: 'parentProject name description input output pmiEvents'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIObjectExecution subclass: #PMIProcessConnector
+PMBOKObjectExecution subclass: #PMBOKProcessConnector
 	instanceVariableNames: 'name isEnabled deliverables comments link'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIObjectExecution subclass: #PMIProgram
+PMBOKObjectExecution subclass: #PMBOKProgram
 	instanceVariableNames: 'name description projects programParent priority'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIObjectExecution subclass: #PMIProject
+PMBOKObjectExecution subclass: #PMBOKProject
 	instanceVariableNames: 'name description processes projectParent'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIDeliverable subclass: #PMIDocument
+PMBOKDeliverable subclass: #PMBOKDocument
 	instanceVariableNames: 'extension document link'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIEvent subclass: #PMIDeliverableEvent
+PMBOKEvent subclass: #PMBOKDeliverableEvent
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIDeliverableEvent subclass: #PMIDocumentEvent
+PMBOKDeliverableEvent subclass: #PMBOKDocumentEvent
 	instanceVariableNames: 'document comments'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIDeliverableEvent subclass: #PMIPackageEvent
+PMBOKDeliverableEvent subclass: #PMBOKPackageEvent
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIDocumentEvent subclass: #PMICreateVersionEvent
+PMBOKDocumentEvent subclass: #PMBOKCreateVersionEvent
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIDocumentEvent subclass: #PMIPublishEvent
+PMBOKDocumentEvent subclass: #PMBOKPublishEvent
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIDocumentEvent subclass: #PMIUpdateVersionEvent
+PMBOKDocumentEvent subclass: #PMBOKUpdateVersionEvent
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIPortfolio subclass: #PMIHigherLevelPortfolio
+PMBOKPortfolio subclass: #PMBOKHigherLevelPortfolio
 	instanceVariableNames: 'lowerLevelPortfolios projects'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIPortfolio subclass: #PMILowerLevelPortfolio
+PMBOKPortfolio subclass: #PMBOKLowerLevelPortfolio
 	instanceVariableNames: 'parentPorfolio'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIProcessConnector subclass: #PMIInput
+PMBOKProcessConnector subclass: #PMBOKInput
 	instanceVariableNames: 'neededPercentage'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIProcessConnector subclass: #PMIOutput
+PMBOKProcessConnector subclass: #PMBOKOutput
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIProgram subclass: #PMIHigherLevelProgram
+PMBOKProgram subclass: #PMBOKHigherLevelProgram
 	instanceVariableNames: 'lowerLevelPrograms'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIProgram subclass: #PMILowerLevelProgram
+PMBOKProgram subclass: #PMBOKLowerLevelProgram
 	instanceVariableNames: 'parentProgram'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIProcessesBuilder subclass: #PMIEnglishProcessesBuilderVersion4
+PMBOKProcessesBuilder subclass: #PMBOKEnglishProcessesBuilderVersion4
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIProcessesBuilder subclass: #PMISpanishProcessesBuilderVersion4
+PMBOKProcessesBuilder subclass: #PMBOKSpanishProcessesBuilderVersion4
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''

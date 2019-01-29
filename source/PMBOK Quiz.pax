@@ -5,19 +5,19 @@ package paxVersion: 1;
 
 
 package classNames
-	add: #PMIAreaChooseQuiz;
-	add: #PMIArtifactQuiz;
-	add: #PMIChooseQuiz;
-	add: #PMIDeliverableChooseQuiz;
-	add: #PMIDeliverableQuiz;
-	add: #PMIGroupChooseQuiz;
-	add: #PMINonProcessQuiz;
-	add: #PMIProcessChooseQuiz;
-	add: #PMIProcessQuiz;
-	add: #PMIQuizBuilder;
-	add: #PMIQuizObject;
-	add: #PMIToolChooseQuiz;
-	add: #PMIToolQuiz;
+	add: #PMBOKAreaChooseQuiz;
+	add: #PMBOKArtifactQuiz;
+	add: #PMBOKChooseQuiz;
+	add: #PMBOKDeliverableChooseQuiz;
+	add: #PMBOKDeliverableQuiz;
+	add: #PMBOKGroupChooseQuiz;
+	add: #PMBOKNonProcessQuiz;
+	add: #PMBOKProcessChooseQuiz;
+	add: #PMBOKProcessQuiz;
+	add: #PMBOKQuizBuilder;
+	add: #PMBOKQuizObject;
+	add: #PMBOKToolChooseQuiz;
+	add: #PMBOKToolQuiz;
 	yourself.
 
 package binaryGlobalNames: (Set new
@@ -36,67 +36,67 @@ package!
 
 "Class Definitions"!
 
-Object subclass: #PMIQuizObject
+Object subclass: #PMBOKQuizObject
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIQuizObject subclass: #PMIChooseQuiz
+PMBOKQuizObject subclass: #PMBOKChooseQuiz
 	instanceVariableNames: 'text options answer pmiObject randomObject'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIQuizObject subclass: #PMINonProcessQuiz
+PMBOKQuizObject subclass: #PMBOKNonProcessQuiz
 	instanceVariableNames: 'inputProcesses outputProcesses'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIQuizObject subclass: #PMIProcessQuiz
+PMBOKQuizObject subclass: #PMBOKProcessQuiz
 	instanceVariableNames: 'processToQuiz inputResults outputResults toolResults descriptionResult groupResult areaResult'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIQuizObject subclass: #PMIQuizBuilder
+PMBOKQuizObject subclass: #PMBOKQuizBuilder
 	instanceVariableNames: 'baseObject aspect'
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIChooseQuiz subclass: #PMIAreaChooseQuiz
+PMBOKChooseQuiz subclass: #PMBOKAreaChooseQuiz
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIChooseQuiz subclass: #PMIDeliverableChooseQuiz
+PMBOKChooseQuiz subclass: #PMBOKDeliverableChooseQuiz
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIChooseQuiz subclass: #PMIGroupChooseQuiz
+PMBOKChooseQuiz subclass: #PMBOKGroupChooseQuiz
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIChooseQuiz subclass: #PMIProcessChooseQuiz
+PMBOKChooseQuiz subclass: #PMBOKProcessChooseQuiz
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMIChooseQuiz subclass: #PMIToolChooseQuiz
+PMBOKChooseQuiz subclass: #PMBOKToolChooseQuiz
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMINonProcessQuiz subclass: #PMIArtifactQuiz
+PMBOKNonProcessQuiz subclass: #PMBOKArtifactQuiz
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMINonProcessQuiz subclass: #PMIDeliverableQuiz
+PMBOKNonProcessQuiz subclass: #PMBOKDeliverableQuiz
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''
 	classInstanceVariableNames: ''!
-PMINonProcessQuiz subclass: #PMIToolQuiz
+PMBOKNonProcessQuiz subclass: #PMBOKToolQuiz
 	instanceVariableNames: ''
 	classVariableNames: ''
 	poolDictionaries: ''

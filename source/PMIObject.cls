@@ -11,12 +11,10 @@ PMIObject comment: ''!
 !PMIObject methodsFor!
 
 asTreeNode
-
-	^PMITreeNode on: self!
+	^PMBOKTreeNode on: self!
 
 defaultLanguage
-
-	^PMILanguage default!
+	^PMBOKLanguage default!
 
 defaultPath
 
@@ -102,8 +100,7 @@ templatesPath
 !PMIObject class methodsFor!
 
 defaultLanguage
-
-	^PMILanguage default!
+	^PMBOKLanguage default!
 
 new
 
