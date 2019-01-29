@@ -16,8 +16,9 @@ The **meta model** includes all elements of the **PMBOK®**:
 
 <br>There is also a **Quiz** tool to automatically generate questions about the **meta model**.
 <br>
-Originally developed around 2010 and 2011 now has been migrated to the lasted Dolphin Smalltalk version.
-
+Originally developed around 2010 and 2011 now has been migrated to the lasted Dolphin Smalltalk version.<br>
+**PMBOK Browser Shell**
 ![PMBOK Browser Shell](https://github.com/brunobuzzi/PMBOK-Browser/blob/master/wiki/pmbok-browser.png)
-<br>
+<br><br>
+**Processes Browser Shell**
 ![Processes Browser Shell](https://github.com/brunobuzzi/PMBOK-Browser/blob/master/wiki/processes-browser-01.png)
