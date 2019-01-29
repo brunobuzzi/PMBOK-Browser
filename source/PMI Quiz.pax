@@ -1,0 +1,113 @@
+﻿| package |
+package := Package name: 'PMI Quiz'.
+package paxVersion: 1;
+	basicComment: ''.
+
+package basicPackageVersion: '0.005'.
+
+
+package classNames
+	add: #PMIAreaChooseQuiz;
+	add: #PMIArtifactQuiz;
+	add: #PMIChooseQuiz;
+	add: #PMIDeliverableChooseQuiz;
+	add: #PMIDeliverableQuiz;
+	add: #PMIGroupChooseQuiz;
+	add: #PMINonProcessQuiz;
+	add: #PMIProcessChooseQuiz;
+	add: #PMIProcessQuiz;
+	add: #PMIQuizBuilder;
+	add: #PMIQuizObject;
+	add: #PMIToolChooseQuiz;
+	add: #PMIToolQuiz;
+	yourself.
+
+package binaryGlobalNames: (Set new
+	yourself).
+
+package globalAliases: (Set new
+	yourself).
+
+package setPrerequisites: (IdentitySet new
+	add: '..\Core\Object Arts\Dolphin\Base\Dolphin';
+	add: '..\Core\Object Arts\Dolphin\System\Random\Dolphin Random Stream';
+	add: 'PMI';
+	yourself).
+
+package!
+
+"Class Definitions"!
+
+Object subclass: #PMIQuizObject
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIQuizObject subclass: #PMIChooseQuiz
+	instanceVariableNames: 'text options answer pmiObject randomObject'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIQuizObject subclass: #PMINonProcessQuiz
+	instanceVariableNames: 'inputProcesses outputProcesses'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIQuizObject subclass: #PMIProcessQuiz
+	instanceVariableNames: 'processToQuiz inputResults outputResults toolResults descriptionResult groupResult areaResult'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIQuizObject subclass: #PMIQuizBuilder
+	instanceVariableNames: 'baseObject aspect'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIChooseQuiz subclass: #PMIAreaChooseQuiz
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIChooseQuiz subclass: #PMIDeliverableChooseQuiz
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIChooseQuiz subclass: #PMIGroupChooseQuiz
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIChooseQuiz subclass: #PMIProcessChooseQuiz
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIChooseQuiz subclass: #PMIToolChooseQuiz
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMINonProcessQuiz subclass: #PMIArtifactQuiz
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMINonProcessQuiz subclass: #PMIDeliverableQuiz
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMINonProcessQuiz subclass: #PMIToolQuiz
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+"Global Aliases"!
+
+
+"Loose Methods"!
+
+"End of package definition"!
+

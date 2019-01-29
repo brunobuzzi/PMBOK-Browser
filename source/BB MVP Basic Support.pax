@@ -1,0 +1,161 @@
+﻿| package |
+package := Package name: 'BB MVP Basic Support'.
+package paxVersion: 1;
+	basicComment: ''.
+
+package basicPackageVersion: '0.022'.
+
+
+package classNames
+	add: #BBDialog;
+	add: #BBEditingDialog;
+	add: #DetalleDeOpciones;
+	add: #ListTreePresenter;
+	add: #ListTreeView;
+	add: #MutipleSelectionListTreeView;
+	add: #RichTextComposite;
+	add: #RichTextShell;
+	add: #RichTextURLComposite;
+	yourself.
+
+package methodNames
+	add: #Date -> #printShortFormat;
+	add: #Shell -> #isEditShell;
+	add: #String -> #completeTo:;
+	add: #Time -> #printShortFormat;
+	add: #TimeStamp -> #printShortFormat;
+	yourself.
+
+package globalNames
+	add: #ListTreeConstants;
+	yourself.
+
+package binaryGlobalNames: (Set new
+	yourself).
+
+package globalAliases: (Set new
+	yourself).
+
+package setPrerequisites: (IdentitySet new
+	add: '..\Core\Object Arts\Dolphin\Base\Dolphin';
+	add: '..\Core\Object Arts\Dolphin\MVP\Views\Common Controls\Dolphin Common Controls';
+	add: '..\Core\Object Arts\Dolphin\MVP\Views\Control Bars\Dolphin Control Bars';
+	add: '..\Core\Object Arts\Dolphin\MVP\Models\List\Dolphin List Models';
+	add: '..\Core\Object Arts\Dolphin\MVP\Presenters\List\Dolphin List Presenter';
+	add: '..\Core\Object Arts\Dolphin\MVP\Deprecated\Dolphin MVP (Deprecated)';
+	add: '..\Core\Object Arts\Dolphin\MVP\Base\Dolphin MVP Base';
+	add: '..\Core\Object Arts\Dolphin\MVP\Presenters\Text\Dolphin Rich Text Presenter';
+	add: '..\Core\Object Arts\Dolphin\MVP\Views\SysLink\Dolphin SysLink Control';
+	add: '..\Core\Object Arts\Dolphin\MVP\Presenters\Text\Dolphin Text Presenter';
+	add: '..\Core\Object Arts\Dolphin\MVP\Models\Tree\Dolphin Tree Models';
+	add: '..\Core\Object Arts\Dolphin\MVP\Presenters\Tree\Dolphin Tree Presenter';
+	add: '..\Core\Object Arts\Dolphin\MVP\Type Converters\Dolphin Type Converters';
+	add: '..\Core\Object Arts\Dolphin\MVP\Gdiplus\Gdiplus';
+	add: '..\Core\Object Arts\Dolphin\IDE\Base\Internal Bitmaps and Icons';
+	add: '..\Core\Object Arts\Dolphin\ActiveX\Components\SHDocVw\Internet Explorer';
+	yourself).
+
+package!
+
+"Class Definitions"!
+
+Presenter subclass: #RichTextComposite
+	instanceVariableNames: 'richTextPresenter textoBuscarPresenter'
+	classVariableNames: 'RichTextCompositeZoom'
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+RichTextComposite subclass: #RichTextURLComposite
+	instanceVariableNames: 'urlPresenter'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+ListPresenter subclass: #ListTreePresenter
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Shell subclass: #RichTextShell
+	instanceVariableNames: 'richComposite'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Dialog subclass: #BBDialog
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+BBDialog subclass: #BBEditingDialog
+	instanceVariableNames: 'atomicContainer domainModel state answer'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+BBDialog subclass: #DetalleDeOpciones
+	instanceVariableNames: 'listaP containerP'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+ListView subclass: #ListTreeView
+	instanceVariableNames: 'hasExplicitTreeModel treeModel selChangeCause expanded hiddenExpanded options indentSeparation getChildrenBlock hasChildrenBlock getParentBlock sortBlock doSortChildrenBlock dummy2 dummy1'
+	classVariableNames: ''
+	poolDictionaries: 'ListTreeConstants'
+	classInstanceVariableNames: 'stateImageManager stateImageBlock'!
+MultipleSelectionListView subclass: #MutipleSelectionListTreeView
+	instanceVariableNames: 'hasExplicitTreeModel treeModel selChangeCause expanded hiddenExpanded options indentSeparation getChildrenBlock hasChildrenBlock getParentBlock sortBlock doSortChildrenBlock dummy2 dummy1'
+	classVariableNames: ''
+	poolDictionaries: 'ListTreeConstants'
+	classInstanceVariableNames: ''!
+
+"Global Aliases"!
+
+
+"Loose Methods"!
+
+!Date methodsFor!
+
+printShortFormat
+	"
+Date today printUMLShortFormat. Date fromString: '20/04/2010' format: 'dd/MM/yyyy'.
+"
+	| str |
+
+	str := String writeStream.
+	self printOn: str format:'dd/MM/yyyy'.
+	^str contents asString! !
+!Date categoriesFor: #printShortFormat!accessing!public! !
+
+!Shell methodsFor!
+
+isEditShell
+
+	^false! !
+!Shell categoriesFor: #isEditShell!public! !
+
+!String methodsFor!
+
+completeTo: aString
+	"Answer a new concatenated collection with the reciver to argument <aString> following the Ascii Table.
+	Both string must have size = 1 otherwise answer an empty string"
+	| newString |
+
+	newString := ''.
+	((self size = 1) and: [aString size = 1]) ifFalse: [^newString].
+	self first asciiValue to: aString first asciiValue do: [:index | newString := newString, (Character value: index) asString].
+	^newString! !
+!String categoriesFor: #completeTo:!public! !
+
+!Time methodsFor!
+
+printShortFormat
+
+	^self printString! !
+!Time categoriesFor: #printShortFormat!accessing!public! !
+
+!TimeStamp methodsFor!
+
+printShortFormat
+
+	^date printShortFormat , ' ', time printString! !
+!TimeStamp categoriesFor: #printShortFormat!accessing!public! !
+
+"End of package definition"!
+

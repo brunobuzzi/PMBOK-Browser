@@ -1,0 +1,12 @@
+*.chg
+*.ERRORS
+*.img
+*.img7
+*.pac
+*.sml
+*.exe
+*.dll
+runtime/
+PMPFiles
+pmbok-en.obj
+pmbok-sp.obj

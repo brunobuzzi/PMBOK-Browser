@@ -1,0 +1,483 @@
+﻿| package |
+package := Package name: 'PMI'.
+package paxVersion: 1;
+	basicComment: ''.
+
+package basicPackageVersion: '0.017'.
+
+
+package classNames
+	add: #PMIApprovedChangeRequestDefinition;
+	add: #PMIArtifactDefinition;
+	add: #PMIArtifactExecutionPath;
+	add: #PMIChangeRequestDefinition;
+	add: #PMIChangeRequestExecutionPath;
+	add: #PMIChangeRequestStatusUpdateDefinition;
+	add: #PMIClosingGroup;
+	add: #PMICommunicationManagement;
+	add: #PMICostManagement;
+	add: #PMICreateVersionEvent;
+	add: #PMIDeliverable;
+	add: #PMIDeliverableArtifactDefinition;
+	add: #PMIDeliverableDefinition;
+	add: #PMIDeliverableEvent;
+	add: #PMIDocument;
+	add: #PMIDocumentDefinition;
+	add: #PMIDocumentEvent;
+	add: #PMIDocumentUpdateDefinition;
+	add: #PMIDocumentWrapper;
+	add: #PMIEnglishLanguage;
+	add: #PMIEnglishProcessesBuilderVersion4;
+	add: #PMIEvent;
+	add: #PMIExecutingGroup;
+	add: #PMIExecutionPath;
+	add: #PMIExecutionTree;
+	add: #PMIExternalEntity;
+	add: #PMIHigherLevelPortfolio;
+	add: #PMIHigherLevelProgram;
+	add: #PMIHumanResourceManagement;
+	add: #PMIInitiatingGroup;
+	add: #PMIInput;
+	add: #PMIInputDefinition;
+	add: #PMIIntegrationManagement;
+	add: #PMIKnowledgeArea;
+	add: #PMILanguage;
+	add: #PMILowerLevelPortfolio;
+	add: #PMILowerLevelProgram;
+	add: #PMIManagementProcessGroup;
+	add: #PMIMonitoringControllingGroup;
+	add: #PMIObject;
+	add: #PMIObjectDefinition;
+	add: #PMIObjectExecution;
+	add: #PMIOutput;
+	add: #PMIOutputDefinition;
+	add: #PMIPackageEvent;
+	add: #PMIPlanningGroup;
+	add: #PMIPortfolio;
+	add: #PMIProcess;
+	add: #PMIProcessArtifactDefinition;
+	add: #PMIProcessConnector;
+	add: #PMIProcessDefinition;
+	add: #PMIProcessesBuilder;
+	add: #PMIProcurementManagement;
+	add: #PMIProductServiceDefinition;
+	add: #PMIProgram;
+	add: #PMIProject;
+	add: #PMIProjectDefinition;
+	add: #PMIPublishEvent;
+	add: #PMIQualityManagement;
+	add: #PMIRiskManagement;
+	add: #PMIScopeManagement;
+	add: #PMISpanishLanguage;
+	add: #PMISpanishProcessesBuilderVersion4;
+	add: #PMITimeManagement;
+	add: #PMIToolOrTechnique;
+	add: #PMITreeModel;
+	add: #PMITreeNode;
+	add: #PMIUpdateVersionEvent;
+	add: #PMIValidatedChangeDefinition;
+	yourself.
+
+package methodNames
+	add: #OrderedCollection -> #randomPeek;
+	add: #OrderedCollection -> #randomPeekWith:;
+	yourself.
+
+package binaryGlobalNames: (Set new
+	yourself).
+
+package globalAliases: (Set new
+	yourself).
+
+package setPrerequisites: (IdentitySet new
+	add: '..\Core\Object Arts\Dolphin\Base\Dolphin';
+	add: '..\Core\Object Arts\Dolphin\MVP\Base\Dolphin MVP Base';
+	add: '..\Core\Object Arts\Dolphin\System\Random\Dolphin Random Stream';
+	add: '..\Core\Object Arts\Dolphin\MVP\Models\Tree\Dolphin Tree Models';
+	add: '..\Core\Object Arts\Dolphin\MVP\Presenters\Tree\Dolphin Tree Presenter';
+	add: '..\Core\Object Arts\Dolphin\DolphinSure\DolphinSure';
+	add: '..\Core\Object Arts\Dolphin\ActiveX\COM\OLE COM';
+	add: '..\Core\Contributions\Refactory\Refactoring Browser\SmallLint\RBSmallLint';
+	add: '..\Core\Object Arts\Samples\MVP\Wordpad\Wordpad';
+	yourself).
+
+package!
+
+"Class Definitions"!
+
+Object subclass: #PMIObject
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIObject subclass: #PMIDocumentWrapper
+	instanceVariableNames: 'document'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIObject subclass: #PMILanguage
+	instanceVariableNames: ''
+	classVariableNames: 'Default'
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIObject subclass: #PMIObjectDefinition
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIObject subclass: #PMIObjectExecution
+	instanceVariableNames: 'pmiDefinition'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIObject subclass: #PMIProcessesBuilder
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: 'default'!
+PMIObject subclass: #PMITreeModel
+	instanceVariableNames: 'name description tree'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIObject subclass: #PMITreeNode
+	instanceVariableNames: 'object description'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMILanguage subclass: #PMIEnglishLanguage
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMILanguage subclass: #PMISpanishLanguage
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIObjectDefinition subclass: #PMIArtifactDefinition
+	instanceVariableNames: 'name description'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIObjectDefinition subclass: #PMIDeliverableDefinition
+	instanceVariableNames: 'name description'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIObjectDefinition subclass: #PMIExecutionPath
+	instanceVariableNames: 'path'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIObjectDefinition subclass: #PMIExternalEntity
+	instanceVariableNames: 'name description'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIObjectDefinition subclass: #PMIKnowledgeArea
+	instanceVariableNames: 'name description processes'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIObjectDefinition subclass: #PMIManagementProcessGroup
+	instanceVariableNames: 'processes description'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIObjectDefinition subclass: #PMIProcessArtifactDefinition
+	instanceVariableNames: 'deliverable description images'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIObjectDefinition subclass: #PMIProcessDefinition
+	instanceVariableNames: 'name description input output knowledgeArea managementGroup image toolsAndTechniques inputArtifacts outputArtifacts'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIObjectDefinition subclass: #PMIProjectDefinition
+	instanceVariableNames: 'name description knowledgeAreas groups deliverables toolsAndTechniques pmBookPath trees'
+	classVariableNames: 'Default EnglishDefinition'
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIArtifactDefinition subclass: #PMIApprovedChangeRequestDefinition
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIArtifactDefinition subclass: #PMIChangeRequestDefinition
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIArtifactDefinition subclass: #PMIChangeRequestStatusUpdateDefinition
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIArtifactDefinition subclass: #PMIDeliverableArtifactDefinition
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIArtifactDefinition subclass: #PMIDocumentUpdateDefinition
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIArtifactDefinition subclass: #PMIProductServiceDefinition
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIArtifactDefinition subclass: #PMIValidatedChangeDefinition
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIDeliverableDefinition subclass: #PMIDocumentDefinition
+	instanceVariableNames: 'isOrganizationAsset templates'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIDeliverableDefinition subclass: #PMIToolOrTechnique
+	instanceVariableNames: 'specificDescription images'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIExecutionPath subclass: #PMIArtifactExecutionPath
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIExecutionPath subclass: #PMIChangeRequestExecutionPath
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIKnowledgeArea subclass: #PMICommunicationManagement
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIKnowledgeArea subclass: #PMICostManagement
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIKnowledgeArea subclass: #PMIHumanResourceManagement
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIKnowledgeArea subclass: #PMIIntegrationManagement
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIKnowledgeArea subclass: #PMIProcurementManagement
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIKnowledgeArea subclass: #PMIQualityManagement
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIKnowledgeArea subclass: #PMIRiskManagement
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIKnowledgeArea subclass: #PMIScopeManagement
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIKnowledgeArea subclass: #PMITimeManagement
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIManagementProcessGroup subclass: #PMIClosingGroup
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIManagementProcessGroup subclass: #PMIExecutingGroup
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIManagementProcessGroup subclass: #PMIInitiatingGroup
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIManagementProcessGroup subclass: #PMIMonitoringControllingGroup
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIManagementProcessGroup subclass: #PMIPlanningGroup
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIProcessArtifactDefinition subclass: #PMIInputDefinition
+	instanceVariableNames: 'baselineDocuments'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIProcessArtifactDefinition subclass: #PMIOutputDefinition
+	instanceVariableNames: 'event'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIObjectExecution subclass: #PMIDeliverable
+	instanceVariableNames: 'name description version versionComments completedPercentage pmiEvents'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIObjectExecution subclass: #PMIEvent
+	instanceVariableNames: 'timestamp'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIObjectExecution subclass: #PMIExecutionTree
+	instanceVariableNames: 'executionTree'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIObjectExecution subclass: #PMIPortfolio
+	instanceVariableNames: 'name description higherLevelPrograms priority'
+	classVariableNames: 'CacheOfPortfolios'
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIObjectExecution subclass: #PMIProcess
+	instanceVariableNames: 'parentProject name description input output pmiEvents'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIObjectExecution subclass: #PMIProcessConnector
+	instanceVariableNames: 'name isEnabled deliverables comments link'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIObjectExecution subclass: #PMIProgram
+	instanceVariableNames: 'name description projects programParent priority'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIObjectExecution subclass: #PMIProject
+	instanceVariableNames: 'name description processes projectParent'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIDeliverable subclass: #PMIDocument
+	instanceVariableNames: 'extension document link'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIEvent subclass: #PMIDeliverableEvent
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIDeliverableEvent subclass: #PMIDocumentEvent
+	instanceVariableNames: 'document comments'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIDeliverableEvent subclass: #PMIPackageEvent
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIDocumentEvent subclass: #PMICreateVersionEvent
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIDocumentEvent subclass: #PMIPublishEvent
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIDocumentEvent subclass: #PMIUpdateVersionEvent
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIPortfolio subclass: #PMIHigherLevelPortfolio
+	instanceVariableNames: 'lowerLevelPortfolios projects'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIPortfolio subclass: #PMILowerLevelPortfolio
+	instanceVariableNames: 'parentPorfolio'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIProcessConnector subclass: #PMIInput
+	instanceVariableNames: 'neededPercentage'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIProcessConnector subclass: #PMIOutput
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIProgram subclass: #PMIHigherLevelProgram
+	instanceVariableNames: 'lowerLevelPrograms'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIProgram subclass: #PMILowerLevelProgram
+	instanceVariableNames: 'parentProgram'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIProcessesBuilder subclass: #PMIEnglishProcessesBuilderVersion4
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMIProcessesBuilder subclass: #PMISpanishProcessesBuilderVersion4
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+"Global Aliases"!
+
+
+"Loose Methods"!
+
+!OrderedCollection methodsFor!
+
+randomPeek
+	| random |
+
+	random := Random new.
+	random next.
+
+	^self at: (random next * (self size + 1)) asInteger!
+
+randomPeekWith: randomObject
+	| randomNumber |
+
+	self isEmpty ifTrue: [^nil].
+	(self size = 1) ifTrue: [^self first].
+	randomObject next.
+	[randomNumber isNil or: [(randomNumber > self size) or: [randomNumber = 0] ]] whileTrue: [
+		randomNumber := (randomObject next * (self size + 1)) asInteger.].
+
+	^self at: randomNumber! !
+!OrderedCollection categoriesFor: #randomPeek!public! !
+!OrderedCollection categoriesFor: #randomPeekWith:!public! !
+
+"End of package definition"!
+
