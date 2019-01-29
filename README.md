@@ -18,5 +18,6 @@ The **meta model** includes all elements of the **PMBOK®**:
 <br>
 Originally developed around 2010 and 2011 now has been migrated to the lasted Dolphin Smalltalk version.
 
-
+![PMBOK Browser Shell](https://github.com/brunobuzzi/PMBOK-Browser/blob/master/wiki/pmbok-browser.png)
+<br>
 ![Processes Browser Shell](https://github.com/brunobuzzi/PMBOK-Browser/blob/master/wiki/processes-browser-01.png)
