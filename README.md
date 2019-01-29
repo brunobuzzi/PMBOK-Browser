@@ -14,6 +14,6 @@ The **meta model** includes all elements of the **PMBOK®**:
 * Outputs
 * Inputs<br>
 
-<br>There is also a quiz tool to automatically generate questions about the **meta model**.
+<br>There is also a **Quiz** tool to automatically generate questions about the **meta model**.
 <br>
 Originally developed around 2010 and 2011 now has been migrated to the lasted Dolphin Smalltalk version.
