@@ -1,9 +1,7 @@
 ﻿| package |
-package := Package name: 'PMI'.
+package := Package name: 'PMBOK'.
 package paxVersion: 1;
 	basicComment: ''.
-
-package basicPackageVersion: '0.017'.
 
 
 package classNames

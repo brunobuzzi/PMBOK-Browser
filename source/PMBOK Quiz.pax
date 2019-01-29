@@ -1,9 +1,7 @@
 ﻿| package |
-package := Package name: 'PMI Quiz'.
+package := Package name: 'PMBOK Quiz'.
 package paxVersion: 1;
 	basicComment: ''.
-
-package basicPackageVersion: '0.005'.
 
 
 package classNames
@@ -31,7 +29,7 @@ package globalAliases: (Set new
 package setPrerequisites: (IdentitySet new
 	add: '..\Core\Object Arts\Dolphin\Base\Dolphin';
 	add: '..\Core\Object Arts\Dolphin\System\Random\Dolphin Random Stream';
-	add: 'PMI';
+	add: 'PMBOK';
 	yourself).
 
 package!

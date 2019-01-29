@@ -1,13 +1,8 @@
 ﻿| package |
-package := Package name: 'PMI Views'.
+package := Package name: 'PMBOK Quiz Views'.
 package paxVersion: 1;
 	basicComment: ''.
 
-package basicPackageVersion: '0.018'.
-
-package imageStripperBytes: (ByteArray fromBase64String: 'IVNUQiAzIEYPDQAEAAAASW1hZ2VTdHJpcHBlcgAAAABSAAAACQAAAFBNSSBWaWV3c1IAAAAOAAAA
-UE1JQnJvd3Nlci5leGWaAAAAUgAAAAkAAABQTUkgVmlld3NSAAAAGAAAAFBNSUJyb3dzZXJTZXNz
-aW9uTWFuYWdlcg8/IQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA').
 
 package classNames
 	add: #PMIArtifactDefinitionSearchResultComposite;
@@ -101,7 +96,7 @@ package setPrerequisites: (IdentitySet new
 	add: '..\Core\Object Arts\Dolphin\MVP\Type Converters\Dolphin Type Converters';
 	add: '..\Core\Object Arts\Dolphin\MVP\Models\Value\Dolphin Value Models';
 	add: '..\Core\Object Arts\Dolphin\ActiveX\Components\Picture\OLE Picture';
-	add: 'PMI';
+	add: 'PMBOK';
 	add: '..\Core\Object Arts\Dolphin\ActiveX\Shell\Windows Shell';
 	yourself).
 

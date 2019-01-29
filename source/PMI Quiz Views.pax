@@ -57,9 +57,9 @@ package setPrerequisites: (IdentitySet new
 	add: '..\Core\Object Arts\Dolphin\MVP\Presenters\Text\Dolphin Text Presenter';
 	add: '..\Core\Object Arts\Dolphin\MVP\Type Converters\Dolphin Type Converters';
 	add: '..\Core\Object Arts\Dolphin\MVP\Models\Value\Dolphin Value Models';
-	add: 'PMI';
-	add: 'PMI Quiz';
-	add: 'PMI Views';
+	add: 'PMBOK';
+	add: 'PMBOK Quiz';
+	add: 'PMBOK Quiz Views';
 	yourself).
 
 package!
