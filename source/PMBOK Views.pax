@@ -1,0 +1,492 @@
+﻿| package |
+package := Package name: 'PMBOK Views'.
+package paxVersion: 1;
+	basicComment: ''.
+
+
+package classNames
+	add: #PMBOKArtifactDefinitionSearchResultComposite;
+	add: #PMBOKArtifactDefinitionSearchResultShell;
+	add: #PMBOKArtifactsBrowerShell;
+	add: #PMBOKArtifactsBrowserComposite;
+	add: #PMBOKBrowserAboutShell;
+	add: #PMBOKBrowserSessionManager;
+	add: #PMBOKBrowserShell;
+	add: #PMBOKComposite;
+	add: #PMBOKDeliverableBrowserComposite;
+	add: #PMBOKDeliverableBrowserShell;
+	add: #PMBOKGroupsComposite;
+	add: #PMBOKGroupsShell;
+	add: #PMBOKInputComposite;
+	add: #PMBOKInputShell;
+	add: #PMBOKKnowledgeAreaComposite;
+	add: #PMBOKKnowledgeAreaShell;
+	add: #PMBOKPortfolioBrowserComposite;
+	add: #PMBOKPortfolioBrowserShell;
+	add: #PMBOKPortfolioComposite;
+	add: #PMBOKProcessDefinitionComposite;
+	add: #PMBOKProcessDefinitionShell;
+	add: #PMBOKProcessImageComposite;
+	add: #PMBOKProcessSearchResultComposite;
+	add: #PMBOKProcessSearchResultShell;
+	add: #PMBOKProgramComposite;
+	add: #PMBOKProjectComposite;
+	add: #PMBOKProjectDefinitionComposite;
+	add: #PMBOKProjectDefinitionShell;
+	add: #PMBOKProjectShell;
+	add: #PMBOKSearchResultComposite;
+	add: #PMBOKSearchResultShell;
+	add: #PMBOKShell;
+	add: #PMBOKToolComposite;
+	add: #PMBOKToolsBrowserComposite;
+	add: #PMBOKToolsBrowserShell;
+	add: #PMBOKToolShell;
+	add: #PMBOKTreeBuilderComposite;
+	add: #PMBOKTreeBuilderShell;
+	add: #PMBOKTreeNodeDescriptionShell;
+	add: #PMBOKTreeShell;
+	yourself.
+
+package methodNames
+	add: #CompiledMethod -> #compileMethodStringForPMPNewDocument;
+	add: #PMBOKProcessDefinition -> #show;
+	add: #PMBOKProject -> #show;
+	add: #PMBOKProjectDefinition -> #show;
+	add: 'ListPresenter class' -> #resource_PMI_Artifact_definitions;
+	add: 'ListPresenter class' -> #resource_PMI_Artifacts_types;
+	add: 'ListPresenter class' -> #resource_PMI_Deliverable_list;
+	add: 'ListPresenter class' -> #resource_PMI_Knowledge_areas;
+	add: 'ListPresenter class' -> #resource_PMI_Names;
+	add: 'ListPresenter class' -> #resource_PMI_Process_list;
+	add: 'ListPresenter class' -> #resource_PMI_Processes_groups;
+	add: 'ListPresenter class' -> #resource_PMI_Search_Document_Update;
+	add: 'ListPresenter class' -> #resource_PMI_Search_Result_List;
+	add: 'ListPresenter class' -> #resource_PMI_Tools_and_Techniques_list;
+	add: 'PMBOKProjectDefinition class' -> #examplePMIProcesses;
+	add: 'Toolbar class' -> #resource_PMI_Browser_toolbar;
+	yourself.
+
+package binaryGlobalNames: (Set new
+	yourself).
+
+package globalAliases: (Set new
+	yourself).
+
+package setPrerequisites: (IdentitySet new
+	add: 'BB MVP Basic Support';
+	add: '..\Core\Object Arts\Dolphin\IDE\Base\Development System';
+	add: '..\Core\Object Arts\Dolphin\Base\Dolphin';
+	add: '..\Core\Object Arts\Dolphin\MVP\Views\Cards\Dolphin Card Containers';
+	add: '..\Core\Object Arts\Dolphin\MVP\Views\Common Controls\Dolphin Common Controls';
+	add: '..\Core\Object Arts\Dolphin\MVP\Dialogs\Common\Dolphin Common Dialogs';
+	add: '..\Core\Object Arts\Dolphin\MVP\Views\Control Bars\Dolphin Control Bars';
+	add: '..\Core\Object Arts\Dolphin\MVP\Presenters\Folder\Dolphin Folder Presenter';
+	add: '..\Core\Object Arts\Dolphin\MVP\Presenters\Image\Dolphin Image Presenter';
+	add: '..\Core\Object Arts\Dolphin\MVP\Models\List\Dolphin List Models';
+	add: '..\Core\Object Arts\Dolphin\MVP\Presenters\List\Dolphin List Presenter';
+	add: '..\Core\Object Arts\Dolphin\MVP\Views\MoenTree\Dolphin MoenTree View';
+	add: '..\Core\Object Arts\Dolphin\MVP\Base\Dolphin MVP Base';
+	add: '..\Core\Object Arts\Dolphin\MVP\Presenters\Prompters\Dolphin Prompter';
+	add: '..\Core\Object Arts\Dolphin\MVP\Presenters\Text\Dolphin Rich Text Presenter';
+	add: '..\Core\Object Arts\Dolphin\MVP\Views\Scrollbars\Dolphin Scrollbars';
+	add: '..\Core\Object Arts\Dolphin\MVP\Views\Sliding Tray\Dolphin Slidey-Inney-Outey Thing';
+	add: '..\Core\Object Arts\Dolphin\MVP\Presenters\Text\Dolphin Text Presenter';
+	add: '..\Core\Object Arts\Dolphin\MVP\Models\Tree\Dolphin Tree Models';
+	add: '..\Core\Object Arts\Dolphin\MVP\Presenters\Tree\Dolphin Tree Presenter';
+	add: '..\Core\Object Arts\Dolphin\MVP\Type Converters\Dolphin Type Converters';
+	add: '..\Core\Object Arts\Dolphin\MVP\Models\Value\Dolphin Value Models';
+	add: '..\Core\Object Arts\Dolphin\ActiveX\Components\Picture\OLE Picture';
+	add: 'PMBOK';
+	add: '..\Core\Object Arts\Dolphin\ActiveX\Shell\Windows Shell';
+	yourself).
+
+package!
+
+"Class Definitions"!
+
+Presenter subclass: #PMBOKComposite
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMBOKComposite subclass: #PMBOKArtifactsBrowserComposite
+	instanceVariableNames: 'artifactsPresenter inputProcessesPresenter inputPresenter outputProcessesPresenter outputPresenter'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMBOKComposite subclass: #PMBOKDeliverableBrowserComposite
+	instanceVariableNames: 'deliverablesPresenter descriptionComposite inputProcessesPresenter outputProcessesPresenter'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMBOKComposite subclass: #PMBOKGroupsComposite
+	instanceVariableNames: 'groupsPresenter processesPresenter inputPresenter toolsPresenter outputPresenter inputComposite toolComposite outputComposite descriptionComposite'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMBOKComposite subclass: #PMBOKInputComposite
+	instanceVariableNames: 'inputDescription deliverableDescription'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMBOKComposite subclass: #PMBOKKnowledgeAreaComposite
+	instanceVariableNames: 'areasPresenter processesPresenter inputPresenter toolsPresenter outputPresenter inputComposite toolComposite outputComposite descriptionComposite'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMBOKComposite subclass: #PMBOKPortfolioBrowserComposite
+	instanceVariableNames: 'portfoliosPresenter lowerPortfoliosPresenter programsPresenter projectsPresenter lowerPorfolioDescriptionPresenter higherLevelProgramDescriptionPresenter projectDescriptionPresenter'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMBOKComposite subclass: #PMBOKPortfolioComposite
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMBOKComposite subclass: #PMBOKProcessDefinitionComposite
+	instanceVariableNames: 'processDescriptionPresenter inputsPresenter inputDescriptionPresenter toolsPresenter outputsPresenter toolDescriptionPresenter outputDescriptionPresenter processImagePresenter inputDeliverableDescriptionPresenter outputDeliverableDescriptionPresenter inputTreePresenter outputTreePresenter inputDependenciesInputListPresenter inputDependenciesOutputListPresenter outputDependenciesInputListPresenter outputDependenciesOutputListPresenter toolSpecificDescriptionPresenter'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMBOKComposite subclass: #PMBOKProcessImageComposite
+	instanceVariableNames: 'imagePresenter'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMBOKComposite subclass: #PMBOKProgramComposite
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMBOKComposite subclass: #PMBOKProjectComposite
+	instanceVariableNames: 'projectNamePresenter processesPresenter inputPresenter outputPresenter inputDeliverableVersionsPresenter outputDeliverableVersionsPresenter inputDeliverables outputDeliverables outputEventsPresenter currentVersionsPresenter'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMBOKComposite subclass: #PMBOKProjectDefinitionComposite
+	instanceVariableNames: 'processDefinitionComposite processesPresenter categoryKnowledgePresenter categoryGroupPresenter'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMBOKComposite subclass: #PMBOKSearchResultComposite
+	instanceVariableNames: 'listContainer descriptionPresenter listPresenter'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMBOKComposite subclass: #PMBOKToolComposite
+	instanceVariableNames: 'toolDescription specificDescription'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMBOKComposite subclass: #PMBOKToolsBrowserComposite
+	instanceVariableNames: 'toolsPresenter toolComposite processesPresenter'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMBOKComposite subclass: #PMBOKTreeBuilderComposite
+	instanceVariableNames: 'nodeTypesPresenter elementsPresenter treePresenter descriptionPresenter treesPresenter'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMBOKSearchResultComposite subclass: #PMBOKArtifactDefinitionSearchResultComposite
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMBOKSearchResultComposite subclass: #PMBOKProcessSearchResultComposite
+	instanceVariableNames: 'searchedElementDescriptionPresenter'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Shell subclass: #PMBOKShell
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMBOKShell subclass: #PMBOKArtifactsBrowerShell
+	instanceVariableNames: 'artifactsComposite'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMBOKShell subclass: #PMBOKBrowserAboutShell
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMBOKShell subclass: #PMBOKBrowserShell
+	instanceVariableNames: 'folderPresenter'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMBOKShell subclass: #PMBOKDeliverableBrowserShell
+	instanceVariableNames: 'deliverableComposite'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMBOKShell subclass: #PMBOKGroupsShell
+	instanceVariableNames: 'groupsComposite'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMBOKShell subclass: #PMBOKInputShell
+	instanceVariableNames: 'pmiComposite'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMBOKShell subclass: #PMBOKKnowledgeAreaShell
+	instanceVariableNames: 'areaComposite'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMBOKShell subclass: #PMBOKPortfolioBrowserShell
+	instanceVariableNames: 'porfolioComposite'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMBOKShell subclass: #PMBOKProcessDefinitionShell
+	instanceVariableNames: 'processDefinitionComposite'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMBOKShell subclass: #PMBOKProjectDefinitionShell
+	instanceVariableNames: 'projectComposite'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMBOKShell subclass: #PMBOKProjectShell
+	instanceVariableNames: 'projectComposite'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMBOKShell subclass: #PMBOKSearchResultShell
+	instanceVariableNames: 'searchResultComposite'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMBOKShell subclass: #PMBOKToolsBrowserShell
+	instanceVariableNames: 'composite'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMBOKShell subclass: #PMBOKToolShell
+	instanceVariableNames: 'pmiComposite'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMBOKShell subclass: #PMBOKTreeBuilderShell
+	instanceVariableNames: 'builderComposite'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMBOKShell subclass: #PMBOKTreeShell
+	instanceVariableNames: 'treePresenter'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMBOKSearchResultShell subclass: #PMBOKArtifactDefinitionSearchResultShell
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMBOKSearchResultShell subclass: #PMBOKProcessSearchResultShell
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+PMBOKTreeShell subclass: #PMBOKTreeNodeDescriptionShell
+	instanceVariableNames: 'descriptionComposite pmiDescriptionComposite'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+RuntimeSessionManager subclass: #PMBOKBrowserSessionManager
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+"Global Aliases"!
+
+
+"Loose Methods"!
+
+!CompiledMethod methodsFor!
+
+compileMethodStringForPMPNewDocument
+	"Compiles the receiver into a new Compiled Method. The receiver method must answer a String"
+	| newSelector  pmpName newMethod |
+
+	newSelector := (selector , 'New') asSymbol. "Creo el Nombre del Nuevo Metodo"
+	pmpName := selector first asUppercase asString. "Agrego el primer caracter al Nombre del nuevo documento"
+	selector allButFirst do: [:each | each isUpperCase 
+							ifFalse: [pmpName := pmpName , each asString] "si es lower copio el caracter"
+							ifTrue: [pmpName := pmpName , ' ', each asString] ]. "si es upper agrego un espacio y copio"
+	newMethod := newSelector, '
+		^super new
+			name: ''', pmpName,'''; 
+			description: self ', selector, ';
+			yourself.'. "aqui creo el template para compilar y crear el nuevo metodo con todas las reglas"
+
+	methodClass compile: newMethod "compilo el nuevo metodo y este es creado"! !
+!CompiledMethod categoriesFor: #compileMethodStringForPMPNewDocument!public! !
+
+!ListPresenter class methodsFor!
+
+resource_PMI_Artifact_definitions
+	"Answer the literal data from which the 'PMI Artifact definitions' resource can be reconstituted.
+	DO NOT EDIT OR RECATEGORIZE THIS METHOD.
+
+	If you wish to modify this resource evaluate:
+	ViewComposer openOn: (ResourceIdentifier class: self selector: #resource_PMI_Artifact_definitions)
+	"
+
+	^#(#'!!STL' 3 788558 10 ##(Smalltalk.STBViewProxy)  8 ##(Smalltalk.ListView)  98 30 0 0 98 2 8 1409355853 1025 416 590662 2 ##(Smalltalk.ListModel)  202 208 98 0 0 1310726 ##(Smalltalk.IdentitySearchPolicy)  524550 ##(Smalltalk.ColorRef)  8 4278190080 0 5 0 0 0 416 0 8 4294903067 459270 ##(Smalltalk.Message)  8 #displayString 98 0 8 ##(Smalltalk.IconicListAbstract)  1049670 1 ##(Smalltalk.IconImageManager)  0 0 0 0 0 0 202 208 98 5 920646 5 ##(Smalltalk.ListViewColumn)  8 'Name' 601 8 #left 658 8 #name 98 0 787814 3 ##(Smalltalk.BlockClosure)  0 0 1180966 ##(Smalltalk.CompiledExpression)  2 1 656 8 'doIt' 8 '[:a :b | a name <= b name]' 8 #[30 105 226 0 226 32 130 106] 880 928 7 513 0 0 0 416 0 1 0 0 802 8 'Process' 601 848 658 8 #parentProcessName 98 0 914 0 0 946 2 1 656 8 'doIt' 8 '[:a :b | a parentProcessName <= b parentProcessName]' 8 #[30 105 226 0 226 32 130 106] 1072 1104 7 513 0 0 0 416 0 1 0 0 802 8 'Area' 201 848 658 8 #parentProcessAreaName 98 0 914 0 0 946 2 1 656 8 'doIt' 8 '[:a :b | a parentProcessAreaName <= b parentProcessAreaName]' 8 #[30 105 226 0 226 32 130 106] 1232 1264 7 513 0 0 0 416 0 1 0 0 802 8 'Group' 201 848 658 8 #parentProcessGroupName 1248 914 0 0 946 2 1 656 8 'doIt' 8 '[:a :b | a parentProcessGroupName <= b parentProcessGroupName]' 8 #[30 105 226 0 226 32 130 106] 1392 1408 7 513 0 0 0 416 0 1 0 0 802 8 'Type' 201 848 658 8 #printIOType 544 914 0 0 946 2 1 656 8 'doIt' 8 '[:a :b | a printIOType <= b printIOType]' 8 #[30 105 226 0 226 32 130 106] 1536 1552 7 513 0 0 0 416 0 1 0 0 8 #report 544 0 131169 0 0 983302 ##(Smalltalk.MessageSequence)  202 208 98 2 721670 ##(Smalltalk.MessageSend)  8 #createAt:extent: 98 2 328198 ##(Smalltalk.Point)  3199 21 1778 1821 311 416 1714 8 #text: 98 1 8 'Name' 416 983302 ##(Smalltalk.WINDOWPLACEMENT)  8 #[44 0 0 0 0 0 0 0 1 0 0 0 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 63 6 0 0 10 0 0 0 205 9 0 0 165 0 0 0] 98 0 1778 193 193 0 27 )!
+
+resource_PMI_Artifacts_types
+	"Answer the literal data from which the 'PMI Artifacts types' resource can be reconstituted.
+	DO NOT EDIT OR RECATEGORIZE THIS METHOD.
+
+	If you wish to modify this resource evaluate:
+	ViewComposer openOn: (ResourceIdentifier class: self selector: #resource_PMI_Artifacts_types)
+	"
+
+	^#(#'!!STL' 3 788558 10 ##(Smalltalk.STBViewProxy)  8 ##(Smalltalk.ListView)  98 30 0 0 98 2 8 1409355853 1025 416 590662 2 ##(Smalltalk.ListModel)  202 208 98 0 0 1310726 ##(Smalltalk.IdentitySearchPolicy)  524550 ##(Smalltalk.ColorRef)  8 4278190080 0 5 0 0 0 416 0 8 4294903179 459270 ##(Smalltalk.Message)  8 #displayString 98 0 8 ##(Smalltalk.IconicListAbstract)  1049670 1 ##(Smalltalk.IconImageManager)  0 0 0 0 0 0 202 208 98 2 920646 5 ##(Smalltalk.ListViewColumn)  8 'Name' 301 8 #left 658 8 #name 544 787814 3 ##(Smalltalk.BlockClosure)  0 0 1180966 ##(Smalltalk.CompiledExpression)  2 1 656 8 'doIt' 8 '[:a :b | a name <= b name]' 8 #[30 105 226 0 226 32 130 106] 880 912 7 513 0 0 0 416 0 1 0 0 802 8 'Type' 301 848 658 8 #printType 98 0 898 0 0 930 2 1 170 8 'Dolphin' 8 'SortedCollection' 8 'doIt' 8 '[:a :b | a printType <= b printType]' 8 #[30 105 226 0 226 32 130 106] 1056 1088 7 513 0 0 0 416 0 1 0 0 8 #report 544 0 131169 0 0 983302 ##(Smalltalk.MessageSequence)  202 208 98 2 721670 ##(Smalltalk.MessageSend)  8 #createAt:extent: 98 2 328198 ##(Smalltalk.Point)  3199 21 1362 681 311 416 1298 8 #text: 98 1 8 'Name' 416 983302 ##(Smalltalk.WINDOWPLACEMENT)  8 #[44 0 0 0 0 0 0 0 1 0 0 0 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 63 6 0 0 10 0 0 0 147 7 0 0 165 0 0 0] 98 0 1362 193 193 0 27 )!
+
+resource_PMI_Deliverable_list
+	"Answer the literal data from which the 'PMI Deliverable list' resource can be reconstituted.
+	DO NOT EDIT OR RECATEGORIZE THIS METHOD.
+
+	If you wish to modify this resource evaluate:
+	ViewComposer openOn: (ResourceIdentifier class: self selector: #resource_PMI_Deliverable_list)
+	"
+
+	^#(#'!!STL' 3 788558 10 ##(Smalltalk.STBViewProxy)  8 ##(Smalltalk.ListView)  98 30 0 0 98 2 8 1409355853 1025 416 590662 2 ##(Smalltalk.ListModel)  202 208 98 0 0 1310726 ##(Smalltalk.IdentitySearchPolicy)  524550 ##(Smalltalk.ColorRef)  8 4278190080 0 5 0 0 0 416 0 8 4294903511 459270 ##(Smalltalk.Message)  8 #displayString 98 0 8 ##(Smalltalk.IconicListAbstract)  1049670 1 ##(Smalltalk.IconImageManager)  0 0 0 0 0 0 202 208 98 2 920646 5 ##(Smalltalk.ListViewColumn)  8 'Nro' 101 8 #left 787814 3 ##(Smalltalk.BlockClosure)  0 0 1180966 ##(Smalltalk.CompiledExpression)  4 1 656 8 'doIt' 8 '[:each | each projectModel deliverables indexOf: each]' 8 #[32 105 226 0 159 17 178 106] 8 #projectModel 8 #deliverables 8 #indexOf: 880 7 257 0 658 8 #<= 544 0 0 416 0 1 0 0 802 8 'Name' 901 848 658 8 #name 98 0 866 0 0 898 2 1 170 8 'Dolphin' 8 'SortedCollection' 8 'doIt' 8 '[:a :b | a name <= b name]' 8 #[30 105 226 0 226 32 130 106] 1104 1136 7 513 0 0 0 416 0 1 0 0 8 #report 544 0 131169 0 0 983302 ##(Smalltalk.MessageSequence)  202 208 98 2 721670 ##(Smalltalk.MessageSend)  8 #createAt:extent: 98 2 328198 ##(Smalltalk.Point)  3199 21 1410 1051 671 416 1346 8 #text: 98 1 8 'Nro' 416 983302 ##(Smalltalk.WINDOWPLACEMENT)  8 #[44 0 0 0 0 0 0 0 1 0 0 0 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 63 6 0 0 10 0 0 0 76 8 0 0 89 1 0 0] 98 0 1410 193 193 0 27 )!
+
+resource_PMI_Knowledge_areas
+	"Answer the literal data from which the 'PMI Knowledge areas' resource can be reconstituted.
+	DO NOT EDIT OR RECATEGORIZE THIS METHOD.
+
+	If you wish to modify this resource evaluate:
+	ViewComposer openOn: (ResourceIdentifier class: self selector: #resource_PMI_Knowledge_areas)
+	"
+
+	^#(#'!!STL' 3 788558 10 ##(Smalltalk.STBViewProxy)  8 ##(Smalltalk.ListView)  98 30 0 0 98 2 8 1409355853 1025 416 590662 2 ##(Smalltalk.ListModel)  202 208 98 0 0 1310726 ##(Smalltalk.IdentitySearchPolicy)  524550 ##(Smalltalk.ColorRef)  8 4278190080 0 5 0 0 0 416 0 8 4294903067 459270 ##(Smalltalk.Message)  8 #displayString 98 0 8 ##(Smalltalk.IconicListAbstract)  1049670 1 ##(Smalltalk.IconImageManager)  0 0 0 0 0 0 202 208 98 1 920646 5 ##(Smalltalk.ListViewColumn)  8 'Name' 401 8 #left 658 8 #areaName 544 787814 3 ##(Smalltalk.BlockClosure)  0 0 1180966 ##(Smalltalk.CompiledExpression)  2 1 170 8 'Dolphin' 8 'SortedCollection' 8 'doIt' 8 '[:a :b | a areaName <= b areaName]' 8 #[30 105 226 0 226 32 130 106] 880 912 7 513 0 0 0 416 0 1 0 0 8 #report 544 0 131169 0 0 983302 ##(Smalltalk.MessageSequence)  202 208 98 2 721670 ##(Smalltalk.MessageSend)  8 #createAt:extent: 98 2 328198 ##(Smalltalk.Point)  3199 21 1202 491 311 416 1138 8 #text: 98 1 8 'Name' 416 983302 ##(Smalltalk.WINDOWPLACEMENT)  8 #[44 0 0 0 0 0 0 0 1 0 0 0 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 63 6 0 0 10 0 0 0 52 7 0 0 165 0 0 0] 98 0 1202 193 193 0 27 )!
+
+resource_PMI_Names
+	"Answer the literal data from which the 'PMI Names' resource can be reconstituted.
+	DO NOT EDIT OR RECATEGORIZE THIS METHOD.
+
+	If you wish to modify this resource evaluate:
+	ViewComposer openOn: (ResourceIdentifier class: self selector: #resource_PMI_Names)
+	"
+
+	^#(#'!!STL' 3 788558 10 ##(Smalltalk.STBViewProxy)  8 ##(Smalltalk.ListView)  98 30 0 0 98 2 8 1409355853 1025 416 590662 2 ##(Smalltalk.ListModel)  202 208 98 0 0 1310726 ##(Smalltalk.IdentitySearchPolicy)  524550 ##(Smalltalk.ColorRef)  8 4278190080 0 5 0 0 0 416 0 8 4294902945 459270 ##(Smalltalk.Message)  8 #displayString 98 0 8 ##(Smalltalk.IconicListAbstract)  1049670 1 ##(Smalltalk.IconImageManager)  0 0 0 0 0 0 202 208 98 1 920646 5 ##(Smalltalk.ListViewColumn)  8 'Name' 701 8 #left 658 8 #name 544 787814 3 ##(Smalltalk.BlockClosure)  0 0 1180966 ##(Smalltalk.CompiledExpression)  2 1 896 8 'doIt' 8 '[:a :b | a name <= b name]' 8 #[30 105 226 0 226 32 130 106] 880 912 7 513 0 0 0 416 0 1 0 0 8 #report 544 0 131169 0 0 983302 ##(Smalltalk.MessageSequence)  202 208 98 2 721670 ##(Smalltalk.MessageSend)  8 #createAt:extent: 98 2 328198 ##(Smalltalk.Point)  3199 21 1154 731 311 416 1090 8 #text: 98 1 8 'Name' 416 983302 ##(Smalltalk.WINDOWPLACEMENT)  8 #[44 0 0 0 0 0 0 0 1 0 0 0 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 63 6 0 0 10 0 0 0 172 7 0 0 165 0 0 0] 98 0 1154 193 193 0 27 )!
+
+resource_PMI_Process_list
+	"Answer the literal data from which the 'PMI Process list' resource can be reconstituted.
+	DO NOT EDIT OR RECATEGORIZE THIS METHOD.
+
+	If you wish to modify this resource evaluate:
+	ViewComposer openOn: (ResourceIdentifier class: self selector: #resource_PMI_Process_list)
+	"
+
+	^#(#'!!STL' 3 788558 10 ##(Smalltalk.STBViewProxy)  8 ##(Smalltalk.ListView)  98 30 0 0 98 2 8 1409355853 1025 416 590662 2 ##(Smalltalk.ListModel)  202 208 98 0 0 1310726 ##(Smalltalk.IdentitySearchPolicy)  524550 ##(Smalltalk.ColorRef)  8 4278190080 0 5 265030 4 ##(Smalltalk.Menu)  0 16 98 3 984134 2 ##(Smalltalk.CommandMenuItem)  1 1180998 4 ##(Smalltalk.CommandDescription)  8 #showProcessDefinition 8 'Show Process Definition' 1 1 0 0 0 983366 1 ##(Smalltalk.DividerMenuItem)  4097 690 1 722 8 #setProcessImage 8 'Set Process Image' 1 1 0 0 0 8 '' 0 134217729 0 0 0 0 0 0 0 416 0 8 4294902997 459270 ##(Smalltalk.Message)  8 #displayString 98 0 8 ##(Smalltalk.IconicListAbstract)  1049670 1 ##(Smalltalk.IconImageManager)  0 0 0 0 0 0 202 208 98 4 920646 5 ##(Smalltalk.ListViewColumn)  8 'Number' 113 8 #left 914 8 #printNumber 98 0 787814 3 ##(Smalltalk.BlockClosure)  0 0 1180966 ##(Smalltalk.CompiledExpression)  2 1 912 8 'doIt' 8 '[:a :b | a printNumber <= b printNumber]' 8 #[30 105 226 0 226 32 130 106] 1136 1184 7 513 0 0 0 416 0 1 0 0 1058 8 'Name' 601 1104 914 8 #name 98 0 1170 0 0 1202 2 1 170 8 'Dolphin' 8 'SortedCollection' 8 'doIt' 8 '[:a :b | a name <= b name]' 8 #[30 105 226 0 226 32 130 106] 1328 1360 7 513 0 0 0 416 0 1 0 0 1058 8 'Area' 401 1104 914 8 #printAreaName 98 0 1170 0 0 1202 2 1 912 8 'doIt' 8 '[:a :b | a printAreaName <= b printAreaName]' 8 #[30 105 226 0 226 32 130 106] 1536 1568 7 513 0 0 0 416 0 1 0 0 1058 8 'Group' 401 1104 914 8 #printGroupName 1552 1170 0 0 1202 2 1 912 8 'doIt' 8 '[:a :b | a printGroupName <= b printGroupName]' 8 #[30 105 226 0 226 32 130 106] 1696 1712 7 513 0 0 0 416 0 1 0 0 8 #report 544 0 131169 0 0 983302 ##(Smalltalk.MessageSequence)  202 208 98 3 721670 ##(Smalltalk.MessageSend)  8 #createAt:extent: 98 2 328198 ##(Smalltalk.Point)  3199 21 1938 1551 671 416 1874 8 #contextMenu: 98 1 656 416 1874 8 #text: 98 1 8 'Number' 416 983302 ##(Smalltalk.WINDOWPLACEMENT)  8 #[44 0 0 0 0 0 0 0 1 0 0 0 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 63 6 0 0 10 0 0 0 70 9 0 0 89 1 0 0] 98 0 1938 193 193 0 27 )!
+
+resource_PMI_Processes_groups
+	"Answer the literal data from which the 'PMI Processes groups' resource can be reconstituted.
+	DO NOT EDIT OR RECATEGORIZE THIS METHOD.
+
+	If you wish to modify this resource evaluate:
+	ViewComposer openOn: (ResourceIdentifier class: self selector: #resource_PMI_Processes_groups)
+	"
+
+	^#(#'!!STL' 3 788558 10 ##(Smalltalk.STBViewProxy)  8 ##(Smalltalk.ListView)  98 30 0 0 98 2 8 1409355853 1025 416 590662 2 ##(Smalltalk.ListModel)  202 208 98 0 0 1310726 ##(Smalltalk.IdentitySearchPolicy)  524550 ##(Smalltalk.ColorRef)  8 4278190080 0 5 0 0 0 416 0 8 4294903067 459270 ##(Smalltalk.Message)  8 #displayString 98 0 8 ##(Smalltalk.IconicListAbstract)  1049670 1 ##(Smalltalk.IconImageManager)  0 0 0 0 0 0 202 208 98 1 920646 5 ##(Smalltalk.ListViewColumn)  8 'Name' 401 8 #left 658 8 #groupName 544 787814 3 ##(Smalltalk.BlockClosure)  0 0 1180966 ##(Smalltalk.CompiledExpression)  2 1 896 8 'doIt' 8 '[:a :b | a groupName <= b groupName]' 8 #[30 105 226 0 226 32 130 106] 880 912 7 513 0 0 0 416 0 1 0 0 8 #report 544 0 131169 0 0 983302 ##(Smalltalk.MessageSequence)  202 208 98 2 721670 ##(Smalltalk.MessageSend)  8 #createAt:extent: 98 2 328198 ##(Smalltalk.Point)  3199 21 1154 491 311 416 1090 8 #text: 98 1 8 'Name' 416 983302 ##(Smalltalk.WINDOWPLACEMENT)  8 #[44 0 0 0 0 0 0 0 1 0 0 0 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 63 6 0 0 10 0 0 0 52 7 0 0 165 0 0 0] 98 0 1154 193 193 0 27 )!
+
+resource_PMI_Search_Document_Update
+	"Answer the literal data from which the 'PMI Search Document Update' resource can be reconstituted.
+	DO NOT EDIT OR RECATEGORIZE THIS METHOD.
+
+	If you wish to modify this resource evaluate:
+	ViewComposer openOn: (ResourceIdentifier class: self selector: #resource_PMI_Search_Document_Update)
+	"
+
+	^#(#'!!STL' 3 788558 10 ##(Smalltalk.STBViewProxy)  8 ##(Smalltalk.ListView)  98 30 0 0 98 2 8 1409355853 1025 416 590662 2 ##(Smalltalk.ListModel)  202 208 98 0 0 1310726 ##(Smalltalk.IdentitySearchPolicy)  524550 ##(Smalltalk.ColorRef)  8 4278190080 0 5 0 0 0 416 0 8 4294903261 459270 ##(Smalltalk.Message)  8 #displayString 98 0 8 ##(Smalltalk.IconicListAbstract)  1049670 1 ##(Smalltalk.IconImageManager)  0 0 0 0 0 0 202 208 98 4 920646 5 ##(Smalltalk.ListViewColumn)  8 'Name' 601 8 #left 658 8 #name 98 0 787814 3 ##(Smalltalk.BlockClosure)  0 0 1180966 ##(Smalltalk.CompiledExpression)  2 1 656 8 'doIt' 8 '[:a :b | a name <= b name]' 8 #[30 105 226 0 226 32 130 106] 880 928 7 513 0 0 0 416 0 1 0 0 802 8 'Process' 601 848 658 8 #parentProcessName 98 0 914 0 0 946 2 1 656 8 'doIt' 8 '[:a :b | a parentProcessName <= b parentProcessName]' 8 #[30 105 226 0 226 32 130 106] 1072 1104 7 513 0 0 0 416 0 1 0 0 802 8 'Area' 201 848 658 8 #parentProcessAreaName 544 914 0 0 946 2 1 656 8 'doIt' 8 '[:a :b | a parentProcessAreaName <= b parentProcessAreaName]' 8 #[30 105 226 0 226 32 130 106] 1232 1248 7 513 0 0 0 416 0 1 0 0 802 8 'Group' 201 848 658 8 #parentProcessGroupName 544 914 0 0 946 2 1 656 8 'doIt' 8 '[:a :b | a parentProcessGroupName <= b parentProcessGroupName]' 8 #[30 105 226 0 226 32 130 106] 1376 1392 7 513 0 0 0 416 0 1 0 0 8 #report 544 0 131169 0 0 983302 ##(Smalltalk.MessageSequence)  202 208 98 2 721670 ##(Smalltalk.MessageSend)  8 #createAt:extent: 98 2 328198 ##(Smalltalk.Point)  3199 21 1618 1621 311 416 1554 8 #text: 98 1 8 'Name' 416 983302 ##(Smalltalk.WINDOWPLACEMENT)  8 #[44 0 0 0 0 0 0 0 1 0 0 0 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 63 6 0 0 10 0 0 0 105 9 0 0 165 0 0 0] 98 0 1618 193 193 0 27 )!
+
+resource_PMI_Search_Result_List
+	"Answer the literal data from which the 'PMI Search Result List' resource can be reconstituted.
+	DO NOT EDIT OR RECATEGORIZE THIS METHOD.
+
+	If you wish to modify this resource evaluate:
+	ViewComposer openOn: (ResourceIdentifier class: self selector: #resource_PMI_Search_Result_List)
+	"
+
+	^#(#'!!STL' 3 788558 10 ##(Smalltalk.STBViewProxy)  8 ##(Smalltalk.ListView)  98 30 0 0 98 2 8 1409355853 1025 416 590662 2 ##(Smalltalk.ListModel)  202 208 98 0 0 1310726 ##(Smalltalk.IdentitySearchPolicy)  524550 ##(Smalltalk.ColorRef)  8 4278190080 0 5 0 0 0 416 0 8 4294902557 459270 ##(Smalltalk.Message)  8 #displayString 98 0 8 ##(Smalltalk.IconicListAbstract)  1049670 1 ##(Smalltalk.IconImageManager)  0 0 0 0 0 0 202 208 98 2 920646 5 ##(Smalltalk.ListViewColumn)  8 'Type' 301 8 #left 658 8 #printName 544 787814 3 ##(Smalltalk.BlockClosure)  0 0 1180966 ##(Smalltalk.CompiledExpression)  2 1 170 8 'Dolphin' 8 'SortedCollection' 8 'doIt' 8 '[:a :b | a printName <= b printName]' 8 #[30 105 226 0 226 32 130 106] 880 912 7 513 0 0 0 416 0 1 0 0 802 8 'Name' 201 848 658 8 #name 544 898 0 0 930 2 1 656 8 'doIt' 8 '[:a :b | a name <= b name]' 8 #[30 105 226 0 226 32 130 106] 1104 1120 7 513 0 0 0 416 0 1 0 0 8 #report 544 0 131169 0 0 983302 ##(Smalltalk.MessageSequence)  202 208 98 2 721670 ##(Smalltalk.MessageSend)  8 #createAt:extent: 98 2 328198 ##(Smalltalk.Point)  3199 21 1346 591 311 416 1282 8 #text: 98 1 8 'Type' 416 983302 ##(Smalltalk.WINDOWPLACEMENT)  8 #[44 0 0 0 0 0 0 0 1 0 0 0 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 63 6 0 0 10 0 0 0 102 7 0 0 165 0 0 0] 98 0 1346 193 193 0 27 )!
+
+resource_PMI_Tools_and_Techniques_list
+	"Answer the literal data from which the 'PMI Tools and Techniques list' resource can be reconstituted.
+	DO NOT EDIT OR RECATEGORIZE THIS METHOD.
+
+	If you wish to modify this resource evaluate:
+	ViewComposer openOn: (ResourceIdentifier class: self selector: #resource_PMI_Tools_and_Techniques_list)
+	"
+
+	^#(#'!!STL' 3 788558 10 ##(Smalltalk.STBViewProxy)  8 ##(Smalltalk.ListView)  98 30 0 0 98 2 8 1409355853 1025 416 590662 2 ##(Smalltalk.ListModel)  202 208 98 0 0 1310726 ##(Smalltalk.IdentitySearchPolicy)  524550 ##(Smalltalk.ColorRef)  8 4278190080 0 5 0 0 0 416 0 8 4294903511 459270 ##(Smalltalk.Message)  8 #displayString 98 0 8 ##(Smalltalk.IconicListAbstract)  1049670 1 ##(Smalltalk.IconImageManager)  0 0 0 0 0 0 202 208 98 2 920646 5 ##(Smalltalk.ListViewColumn)  8 'Nro' 101 8 #left 787814 3 ##(Smalltalk.BlockClosure)  0 0 1180966 ##(Smalltalk.CompiledExpression)  4 1 656 8 'doIt' 8 '[:each | each projectModel toolsAndTechniques indexOf: each]' 8 #[32 105 226 0 159 17 178 106] 8 #projectModel 8 #toolsAndTechniques 8 #indexOf: 880 7 257 0 658 8 #<= 544 0 0 416 0 1 0 0 802 8 'Name' 901 848 658 8 #name 98 0 866 0 0 898 2 1 170 8 'Dolphin' 8 'SortedCollection' 8 'doIt' 8 '[:a :b | a name <= b name]' 8 #[30 105 226 0 226 32 130 106] 1104 1136 7 513 0 0 0 416 0 1 0 866 0 0 898 8 1 8 ##(Smalltalk.UndefinedObject)  8 'doIt' 8 '[:ctx | 
+ctx item images notEmpty 
+ifTrue: [ctx forecolor: Color darkBlue]
+ifFalse: [ctx forecolor: Color black]]' 8 #[36 105 226 0 159 160 122 17 32 162 181 106 17 32 164 181 106] 8 #item 8 #images 8 #notEmpty 8 ##(Smalltalk.Color)  8 #darkBlue 8 #forecolor: 8 #black 1264 7 257 0 8 #report 544 0 131169 0 0 983302 ##(Smalltalk.MessageSequence)  202 208 98 2 721670 ##(Smalltalk.MessageSend)  8 #createAt:extent: 98 2 328198 ##(Smalltalk.Point)  3199 21 1618 1011 671 416 1554 8 #text: 98 1 8 'Nro' 416 983302 ##(Smalltalk.WINDOWPLACEMENT)  8 #[44 0 0 0 0 0 0 0 1 0 0 0 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 63 6 0 0 10 0 0 0 56 8 0 0 89 1 0 0] 98 0 1618 193 193 0 27 )! !
+!ListPresenter class categoriesFor: #resource_PMI_Artifact_definitions!public!resources-views! !
+!ListPresenter class categoriesFor: #resource_PMI_Artifacts_types!public!resources-views! !
+!ListPresenter class categoriesFor: #resource_PMI_Deliverable_list!public!resources-views! !
+!ListPresenter class categoriesFor: #resource_PMI_Knowledge_areas!public!resources-views! !
+!ListPresenter class categoriesFor: #resource_PMI_Names!public!resources-views! !
+!ListPresenter class categoriesFor: #resource_PMI_Process_list!public!resources-views! !
+!ListPresenter class categoriesFor: #resource_PMI_Processes_groups!public!resources-views! !
+!ListPresenter class categoriesFor: #resource_PMI_Search_Document_Update!public!resources-views! !
+!ListPresenter class categoriesFor: #resource_PMI_Search_Result_List!public!resources-views! !
+!ListPresenter class categoriesFor: #resource_PMI_Tools_and_Techniques_list!public!resources-views! !
+
+!PMBOKProcessDefinition methodsFor!
+
+show
+	^PMBOKProcessDefinitionShell showOn: self! !
+!PMBOKProcessDefinition categoriesFor: #show!public! !
+
+!PMBOKProject methodsFor!
+
+show
+	^PMBOKProjectShell showOn: self! !
+!PMBOKProject categoriesFor: #show!public! !
+
+!PMBOKProjectDefinition methodsFor!
+
+show
+	^PMBOKProjectDefinitionShell show: 'Default view2' on: self! !
+!PMBOKProjectDefinition categoriesFor: #show!public! !
+
+!PMBOKProjectDefinition class methodsFor!
+
+examplePMIProcesses
+	"
+	self examplePMIProcesses.
+"
+
+	^PMBOKProjectDefinitionShell show: 'Default view2' on: self projectModel
+
+	"^PMIProjectDefinitionShell showOn: self default"! !
+!PMBOKProjectDefinition class categoriesFor: #examplePMIProcesses!public! !
+
+!Toolbar class methodsFor!
+
+resource_PMI_Browser_toolbar
+	"Answer the literal data from which the 'PMI Browser toolbar' resource can be reconstituted.
+	DO NOT EDIT OR RECATEGORIZE THIS METHOD.
+
+	If you wish to modify this resource evaluate:
+	ViewComposer openOn: (ResourceIdentifier class: self selector: #resource_PMI_Browser_toolbar)
+	"
+
+	^#(#'!!STL' 4 788558 10 ##(Smalltalk.STBViewProxy) ##(Smalltalk.Toolbar) 34 25 nil nil 34 2 8 1409288972 131137 416 nil 524550 ##(Smalltalk.ColorRef) 8 4278190080 nil 517 nil 263174 ##(Smalltalk.Font) nil true 459014 ##(Smalltalk.LOGFONT) 8 #[243 255 255 255 0 0 0 0 0 0 0 0 0 0 0 0 144 1 0 0 0 0 0 0 3 2 1 34 65 114 105 97 108 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0] 328198 ##(Smalltalk.Point) 193 193 nil 416 482 512 8 1949831345 170 192 8 #() 170 192 34 24 26783 1115206 1 ##(Smalltalk.ToolbarIconButton) 416 1 1180998 4 ##(Smalltalk.CommandDescription) #openPmbook 8 'Open PMBOK' 1 1 263494 3 ##(Smalltalk.Icon) nil true 1572870 ##(Smalltalk.ImageRelativeFileLocator) 8 'papirus-team-app-32.ico' nil 26783 26785 738 416 1 770 #showDefinitionBrowser 8 'PMI Process Browser' 1 1 818 nil true 864 8 'StsProjectEdition.ico' 2032142 ##(Smalltalk.STBExternalResourceLibraryProxy) 8 'dolphindr7.dll' nil 26785 26787 738 416 1 770 #openPortfolioBrowser 8 'Portfolio Browser' 1 1 818 nil true 864 8 'Metaclass.ico' 992 26787 26789 738 416 1 770 #browseGroups 8 'Browse Groups' 1 1 818 nil true 864 8 'MethodProtocol.ico' 992 26789 26791 738 416 1 770 #browseAreas 8 'Browse Knowledge Areas' 1 1 818 nil true 864 8 'EnvironmentBrowserShell.ico' 992 26791 26793 738 416 1 770 #browseDeliverables 8 'Browse Deliverables' 1 1 818 nil true 864 5 786694 ##(Smalltalk.ShellLibrary) 26793 26795 738 416 1 770 #browseArtifacts 8 'Browse Artifacts' 1 1 818 nil true 864 8 'MemoryManager.ico' 992 26795 26797 738 416 1 770 #browseTool 8 'Browse Tools and Techniques' 1 1 818 nil true 864 8 'Class.ico' 992 26797 26799 738 416 1 770 #showTreeBuilder 8 'Show Tree Builder' 1 1 818 nil true 864 8 'ViewComposer.ico' 992 26799 26801 738 416 1 770 #showMyTrees 8 'Show My Trees' 1 1 818 nil true 864 8 'TreePresenter.ico' 992 26801 26803 738 416 1 770 #openQuizBrowser 8 'Processes Quiz' 1 1 818 nil true 864 8 'True.ico' 992 26803 26805 738 416 1 770 #openNonQuizBrowser 8 'Non Processes Quiz' 1 1 818 nil true 864 8 'CheckBox.ico' 992 26805 34 15 752 1049158 1 ##(Smalltalk.ToolbarSeparator) 416 1 896 1024 1104 1184 1264 1360 1440 1858 416 1 1520 1600 1858 416 1 1680 1760 170 176 34 24 657990 3 ##(Smalltalk.DIBSection) nil true nil nil nil nil 3 610 33 33 65 nil 13 1954 nil true nil nil nil nil 3 610 33 33 65 nil 15 1954 nil true nil nil nil nil 3 610 33 33 65 nil 3 1954 nil true nil nil nil nil 3 610 33 33 65 nil 5 1954 nil true nil nil nil nil 3 610 33 33 65 nil 7 1954 nil true nil nil nil nil 3 610 33 33 65 nil 1 1954 nil true nil nil nil nil 3 610 33 33 65 nil 9 1954 nil true nil nil nil nil 3 610 33 33 65 nil 11 1954 nil true nil nil nil nil 3 610 33 33 65 nil 17 1954 nil true nil nil nil nil 3 610 33 33 65 nil 19 1954 nil true nil nil nil nil 3 610 33 33 65 nil 21 1954 nil true nil nil nil nil 3 610 33 33 65 nil 23 nil 1 nil 610 33 33 610 45 45 nil 656198 1 ##(Smalltalk.FlowLayout) 1 1 1 983302 ##(Smalltalk.MessageSequence) 138 144 34 2 721670 ##(Smalltalk.MessageSend) #createAt:extent: 34 2 610 2719 21 610 611 51 416 2482 #updateSizePosted 688 416 983302 ##(Smalltalk.WINDOWPLACEMENT) 8 #[44 0 0 0 0 0 0 0 1 0 0 0 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 79 5 0 0 10 0 0 0 128 6 0 0 35 0 0 0] 8 #() 610 193 193 nil 27 )! !
+!Toolbar class categoriesFor: #resource_PMI_Browser_toolbar!public!resources-views! !
+
+"End of package definition"!
+

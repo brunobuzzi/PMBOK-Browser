@@ -1,8 +1,15 @@
 ﻿| package |
 package := Package name: 'PMBOK'.
 package paxVersion: 1;
-	basicComment: ''.
+	basicComment: 'To build a PMBOK from a file:
+PMBOKEnglishProcessesBuilderVersion4 new buildPMBOKFromFile: ''pmbok-en-new.obj''.
+PMBOKSpanishProcessesBuilderVersion4 new buildPMBOKFromFile: ''pmbok-sp-new.obj''.
 
+To fileout a PMBOK to a file:
+PMBOKEnglishProcessesBuilderVersion4 new fileOutPMBOKToFile: ''pmbok-en-new.obj''.
+PMBOKSpanishProcessesBuilderVersion4 new fileOutPMBOKToFile: ''pmbok-sp-new.obj''.'.
+
+package basicScriptAt: #postuninstall put: 'PMBOKSpanishLanguage new setAsDefault.'.
 
 package classNames
 	add: #PMBOKApprovedChangeRequestDefinition;

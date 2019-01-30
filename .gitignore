@@ -8,5 +8,4 @@
 *.dll
 runtime/
 PMPFiles
-pmbok-en.obj
-pmbok-sp.obj
+*.obj

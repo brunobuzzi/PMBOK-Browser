@@ -82,6 +82,10 @@ createKnowledgeAreas
 					yourself);
 		yourself!
 
+defaultProjectDefinition
+
+	^PMBOKProjectDefinition default!
+
 humanResourcesProcesses
 	^OrderedCollection new
 		add: (PMBOKProcessDefinition new
@@ -190,6 +194,10 @@ scopeProcesses
 					yourself);
 		yourself!
 
+setProjectDefinitionWith: aPMBOKProjectDefinition
+
+	PMBOKProjectDefinition default: aPMBOKProjectDefinition!
+
 timeProcesses
 	^OrderedCollection new
 		add: (PMBOKProcessDefinition new
@@ -215,11 +223,13 @@ timeProcesses
 !PMBOKSpanishProcessesBuilderVersion4 categoriesFor: #costProcesses!processes!public! !
 !PMBOKSpanishProcessesBuilderVersion4 categoriesFor: #createGroups!knowledge area!public! !
 !PMBOKSpanishProcessesBuilderVersion4 categoriesFor: #createKnowledgeAreas!knowledge area!public! !
+!PMBOKSpanishProcessesBuilderVersion4 categoriesFor: #defaultProjectDefinition!binary filing!public! !
 !PMBOKSpanishProcessesBuilderVersion4 categoriesFor: #humanResourcesProcesses!processes!public! !
 !PMBOKSpanishProcessesBuilderVersion4 categoriesFor: #integrationProcesses!processes!public! !
 !PMBOKSpanishProcessesBuilderVersion4 categoriesFor: #procurementsProcesses!processes!public! !
 !PMBOKSpanishProcessesBuilderVersion4 categoriesFor: #qualityProcesses!processes!public! !
 !PMBOKSpanishProcessesBuilderVersion4 categoriesFor: #risksProcesses!processes!public! !
 !PMBOKSpanishProcessesBuilderVersion4 categoriesFor: #scopeProcesses!processes!public! !
+!PMBOKSpanishProcessesBuilderVersion4 categoriesFor: #setProjectDefinitionWith:!binary filing!public! !
 !PMBOKSpanishProcessesBuilderVersion4 categoriesFor: #timeProcesses!processes!public! !
 

@@ -24,6 +24,7 @@ package methodNames
 	add: #String -> #completeTo:;
 	add: #Time -> #printShortFormat;
 	add: #TimeStamp -> #printShortFormat;
+	add: #TreeModelAbstract -> #addTree:asChildOf:;
 	yourself.
 
 package globalNames
@@ -156,6 +157,17 @@ printShortFormat
 
 	^date printShortFormat , ' ', time printString! !
 !TimeStamp categoriesFor: #printShortFormat!accessing!public! !
+
+!TreeModelAbstract methodsFor!
+
+addTree: aTreeModel asChildOf: leaf
+
+	" Add aTreeModel as child of leaf in the receiver "
+
+	aTreeModel preOrderDo:[:each | (aTreeModel roots includes: each)
+					ifTrue:[self add: each asChildOf: leaf]
+					ifFalse:[self add: each asChildOf: (aTreeModel parentOf: each)]].! !
+!TreeModelAbstract categoriesFor: #addTree:asChildOf:!public! !
 
 "End of package definition"!
 

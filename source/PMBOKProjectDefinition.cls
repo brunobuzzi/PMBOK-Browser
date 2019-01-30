@@ -55,7 +55,8 @@ closingGroup
 	^groups at: 5!
 
 defaultProcessBuilder
-	^PMBOKProcessesBuilder default!
+	
+	^PMBOKProcessesBuilder default ifNil: [PMBOKProcessesBuilder default: PMBOKSpanishProcessesBuilderVersion4 new]!
 
 deliverables
 	^deliverables!

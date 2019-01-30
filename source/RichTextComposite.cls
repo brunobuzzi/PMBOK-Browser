@@ -154,6 +154,8 @@ resource_Default_view
 
 richTextCompositeZoom
 
+	RichTextCompositeZoom ifNil: [self initializeZoom].
+
 	^RichTextCompositeZoom! !
 !RichTextComposite class categoriesFor: #defaultModel!models!public! !
 !RichTextComposite class categoriesFor: #increaseZoomIn!public! !
