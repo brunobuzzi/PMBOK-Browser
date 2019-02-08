@@ -381,7 +381,7 @@ englishDefinition: aPMIProjectDefinition
 
 icon
 
-	^Icon fromId: 'StsProjectEdition.ico'!
+	^Icon fromId: 'Compiler.ico'!
 
 initializeDefaultPMIProject
 

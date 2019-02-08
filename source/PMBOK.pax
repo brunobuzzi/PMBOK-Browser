@@ -2,8 +2,8 @@
 package := Package name: 'PMBOK'.
 package paxVersion: 1;
 	basicComment: 'To build a PMBOK from a file:
-PMBOKEnglishProcessesBuilderVersion4 new buildPMBOKFromFile: ''pmbok-en-new.obj''.
-PMBOKSpanishProcessesBuilderVersion4 new buildPMBOKFromFile: ''pmbok-sp-new.obj''.
+PMBOKEnglishProcessesBuilderVersion4 new buildPMBOKFromFile: ''C:\Users\Usuario\Documents\GitHub\Dolphin\PMBOK-Browser\pmbok-en-new.obj''.
+PMBOKSpanishProcessesBuilderVersion4 new buildPMBOKFromFile: ''C:\Users\Usuario\Documents\GitHub\Dolphin\PMBOK-Browser\pmbok-sp-new.obj''.
 
 To fileout a PMBOK to a file:
 PMBOKEnglishProcessesBuilderVersion4 new fileOutPMBOKToFile: ''pmbok-en-new.obj''.
@@ -94,17 +94,16 @@ package binaryGlobalNames: (Set new
 package globalAliases: (Set new
 	yourself).
 
-package setPrerequisites: (IdentitySet new
-	add: '..\Core\Object Arts\Dolphin\Base\Dolphin';
-	add: '..\Core\Object Arts\Dolphin\MVP\Base\Dolphin MVP Base';
-	add: '..\Core\Object Arts\Dolphin\System\Random\Dolphin Random Stream';
-	add: '..\Core\Object Arts\Dolphin\MVP\Models\Tree\Dolphin Tree Models';
-	add: '..\Core\Object Arts\Dolphin\MVP\Presenters\Tree\Dolphin Tree Presenter';
-	add: '..\Core\Object Arts\Dolphin\DolphinSure\DolphinSure';
-	add: '..\Core\Object Arts\Dolphin\ActiveX\COM\OLE COM';
-	add: '..\Core\Contributions\Refactory\Refactoring Browser\SmallLint\RBSmallLint';
-	add: '..\Core\Object Arts\Samples\MVP\Wordpad\Wordpad';
-	yourself).
+package setPrerequisites: #(
+	'..\Core\Object Arts\Dolphin\Base\Dolphin'
+	'..\Core\Object Arts\Dolphin\MVP\Base\Dolphin MVP Base'
+	'..\Core\Object Arts\Dolphin\System\Random\Dolphin Random Stream'
+	'..\Core\Object Arts\Dolphin\MVP\Models\Tree\Dolphin Tree Models'
+	'..\Core\Object Arts\Dolphin\MVP\Presenters\Tree\Dolphin Tree Presenter'
+	'..\Core\Object Arts\Dolphin\DolphinSure\DolphinSure'
+	'..\Core\Object Arts\Dolphin\ActiveX\COM\OLE COM'
+	'..\Core\Contributions\Refactory\Refactoring Browser\SmallLint\RBSmallLint'
+	'..\Core\Object Arts\Samples\MVP\Wordpad\Wordpad').
 
 package!
 

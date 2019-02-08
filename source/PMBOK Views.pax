@@ -72,33 +72,36 @@ package binaryGlobalNames: (Set new
 package globalAliases: (Set new
 	yourself).
 
-package setPrerequisites: (IdentitySet new
-	add: 'BB MVP Basic Support';
-	add: '..\Core\Object Arts\Dolphin\IDE\Base\Development System';
-	add: '..\Core\Object Arts\Dolphin\Base\Dolphin';
-	add: '..\Core\Object Arts\Dolphin\MVP\Views\Cards\Dolphin Card Containers';
-	add: '..\Core\Object Arts\Dolphin\MVP\Views\Common Controls\Dolphin Common Controls';
-	add: '..\Core\Object Arts\Dolphin\MVP\Dialogs\Common\Dolphin Common Dialogs';
-	add: '..\Core\Object Arts\Dolphin\MVP\Views\Control Bars\Dolphin Control Bars';
-	add: '..\Core\Object Arts\Dolphin\MVP\Presenters\Folder\Dolphin Folder Presenter';
-	add: '..\Core\Object Arts\Dolphin\MVP\Presenters\Image\Dolphin Image Presenter';
-	add: '..\Core\Object Arts\Dolphin\MVP\Models\List\Dolphin List Models';
-	add: '..\Core\Object Arts\Dolphin\MVP\Presenters\List\Dolphin List Presenter';
-	add: '..\Core\Object Arts\Dolphin\MVP\Views\MoenTree\Dolphin MoenTree View';
-	add: '..\Core\Object Arts\Dolphin\MVP\Base\Dolphin MVP Base';
-	add: '..\Core\Object Arts\Dolphin\MVP\Presenters\Prompters\Dolphin Prompter';
-	add: '..\Core\Object Arts\Dolphin\MVP\Presenters\Text\Dolphin Rich Text Presenter';
-	add: '..\Core\Object Arts\Dolphin\MVP\Views\Scrollbars\Dolphin Scrollbars';
-	add: '..\Core\Object Arts\Dolphin\MVP\Views\Sliding Tray\Dolphin Slidey-Inney-Outey Thing';
-	add: '..\Core\Object Arts\Dolphin\MVP\Presenters\Text\Dolphin Text Presenter';
-	add: '..\Core\Object Arts\Dolphin\MVP\Models\Tree\Dolphin Tree Models';
-	add: '..\Core\Object Arts\Dolphin\MVP\Presenters\Tree\Dolphin Tree Presenter';
-	add: '..\Core\Object Arts\Dolphin\MVP\Type Converters\Dolphin Type Converters';
-	add: '..\Core\Object Arts\Dolphin\MVP\Models\Value\Dolphin Value Models';
-	add: '..\Core\Object Arts\Dolphin\ActiveX\Components\Picture\OLE Picture';
-	add: 'PMBOK';
-	add: '..\Core\Object Arts\Dolphin\ActiveX\Shell\Windows Shell';
-	yourself).
+package setPrerequisites: #(
+	'BB MVP Basic Support'
+	'..\Core\Object Arts\Dolphin\IDE\Base\Development System'
+	'..\Core\Object Arts\Dolphin\Base\Dolphin'
+	'..\Core\Object Arts\Dolphin\MVP\Base\Dolphin Basic Geometry'
+	'..\Core\Object Arts\Dolphin\MVP\Views\Cards\Dolphin Card Containers'
+	'..\Core\Object Arts\Dolphin\MVP\Views\Common Controls\Dolphin Common Controls'
+	'..\Core\Object Arts\Dolphin\MVP\Dialogs\Common\Dolphin Common Dialogs'
+	'..\Core\Object Arts\Dolphin\MVP\Views\Control Bars\Dolphin Control Bars'
+	'..\Core\Object Arts\Dolphin\MVP\Presenters\Folder\Dolphin Folder Presenter'
+	'..\Core\Object Arts\Dolphin\MVP\Presenters\Image\Dolphin Image Presenter'
+	'..\Core\Object Arts\Dolphin\MVP\Models\List\Dolphin List Models'
+	'..\Core\Object Arts\Dolphin\MVP\Presenters\List\Dolphin List Presenter'
+	'..\Core\Object Arts\Dolphin\Base\Dolphin Message Box'
+	'..\Core\Object Arts\Dolphin\MVP\Views\MoenTree\Dolphin MoenTree View'
+	'..\Core\Object Arts\Dolphin\MVP\Base\Dolphin MVP Base'
+	'..\Core\Object Arts\Dolphin\MVP\Presenters\Prompters\Dolphin Prompter'
+	'..\Core\Object Arts\Dolphin\MVP\Presenters\Text\Dolphin Rich Text Presenter'
+	'..\Core\Object Arts\Dolphin\MVP\Views\Scrollbars\Dolphin Scrollbars'
+	'..\Core\Object Arts\Dolphin\MVP\Views\Sliding Tray\Dolphin Slidey-Inney-Outey Thing'
+	'..\Core\Object Arts\Dolphin\MVP\Presenters\Text\Dolphin Text Presenter'
+	'..\Core\Object Arts\Dolphin\MVP\Icons\Dolphin Text Tile Icons'
+	'..\Core\Object Arts\Dolphin\MVP\Models\Tree\Dolphin Tree Models'
+	'..\Core\Object Arts\Dolphin\MVP\Presenters\Tree\Dolphin Tree Presenter'
+	'..\Core\Object Arts\Dolphin\MVP\Type Converters\Dolphin Type Converters'
+	'..\Core\Object Arts\Dolphin\MVP\Models\Value\Dolphin Value Models'
+	'..\Core\Object Arts\Dolphin\MVP\Gdiplus\Gdiplus'
+	'..\Core\Object Arts\Dolphin\ActiveX\Components\Picture\OLE Picture'
+	'PMBOK'
+	'..\Core\Object Arts\Dolphin\ActiveX\Shell\Windows Shell').
 
 package!
 
@@ -485,7 +488,7 @@ resource_PMI_Browser_toolbar
 	ViewComposer openOn: (ResourceIdentifier class: self selector: #resource_PMI_Browser_toolbar)
 	"
 
-	^#(#'!!STL' 4 788558 10 ##(Smalltalk.STBViewProxy) ##(Smalltalk.Toolbar) 34 25 nil nil 34 2 8 1409288972 131137 416 nil 524550 ##(Smalltalk.ColorRef) 8 4278190080 nil 517 nil 263174 ##(Smalltalk.Font) nil true 459014 ##(Smalltalk.LOGFONT) 8 #[243 255 255 255 0 0 0 0 0 0 0 0 0 0 0 0 144 1 0 0 0 0 0 0 3 2 1 34 65 114 105 97 108 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0] 328198 ##(Smalltalk.Point) 193 193 nil 416 482 512 8 1949831345 170 192 8 #() 170 192 34 24 26783 1115206 1 ##(Smalltalk.ToolbarIconButton) 416 1 1180998 4 ##(Smalltalk.CommandDescription) #openPmbook 8 'Open PMBOK' 1 1 263494 3 ##(Smalltalk.Icon) nil true 1572870 ##(Smalltalk.ImageRelativeFileLocator) 8 'papirus-team-app-32.ico' nil 26783 26785 738 416 1 770 #showDefinitionBrowser 8 'PMI Process Browser' 1 1 818 nil true 864 8 'StsProjectEdition.ico' 2032142 ##(Smalltalk.STBExternalResourceLibraryProxy) 8 'dolphindr7.dll' nil 26785 26787 738 416 1 770 #openPortfolioBrowser 8 'Portfolio Browser' 1 1 818 nil true 864 8 'Metaclass.ico' 992 26787 26789 738 416 1 770 #browseGroups 8 'Browse Groups' 1 1 818 nil true 864 8 'MethodProtocol.ico' 992 26789 26791 738 416 1 770 #browseAreas 8 'Browse Knowledge Areas' 1 1 818 nil true 864 8 'EnvironmentBrowserShell.ico' 992 26791 26793 738 416 1 770 #browseDeliverables 8 'Browse Deliverables' 1 1 818 nil true 864 5 786694 ##(Smalltalk.ShellLibrary) 26793 26795 738 416 1 770 #browseArtifacts 8 'Browse Artifacts' 1 1 818 nil true 864 8 'MemoryManager.ico' 992 26795 26797 738 416 1 770 #browseTool 8 'Browse Tools and Techniques' 1 1 818 nil true 864 8 'Class.ico' 992 26797 26799 738 416 1 770 #showTreeBuilder 8 'Show Tree Builder' 1 1 818 nil true 864 8 'ViewComposer.ico' 992 26799 26801 738 416 1 770 #showMyTrees 8 'Show My Trees' 1 1 818 nil true 864 8 'TreePresenter.ico' 992 26801 26803 738 416 1 770 #openQuizBrowser 8 'Processes Quiz' 1 1 818 nil true 864 8 'True.ico' 992 26803 26805 738 416 1 770 #openNonQuizBrowser 8 'Non Processes Quiz' 1 1 818 nil true 864 8 'CheckBox.ico' 992 26805 34 15 752 1049158 1 ##(Smalltalk.ToolbarSeparator) 416 1 896 1024 1104 1184 1264 1360 1440 1858 416 1 1520 1600 1858 416 1 1680 1760 170 176 34 24 657990 3 ##(Smalltalk.DIBSection) nil true nil nil nil nil 3 610 33 33 65 nil 13 1954 nil true nil nil nil nil 3 610 33 33 65 nil 15 1954 nil true nil nil nil nil 3 610 33 33 65 nil 3 1954 nil true nil nil nil nil 3 610 33 33 65 nil 5 1954 nil true nil nil nil nil 3 610 33 33 65 nil 7 1954 nil true nil nil nil nil 3 610 33 33 65 nil 1 1954 nil true nil nil nil nil 3 610 33 33 65 nil 9 1954 nil true nil nil nil nil 3 610 33 33 65 nil 11 1954 nil true nil nil nil nil 3 610 33 33 65 nil 17 1954 nil true nil nil nil nil 3 610 33 33 65 nil 19 1954 nil true nil nil nil nil 3 610 33 33 65 nil 21 1954 nil true nil nil nil nil 3 610 33 33 65 nil 23 nil 1 nil 610 33 33 610 45 45 nil 656198 1 ##(Smalltalk.FlowLayout) 1 1 1 983302 ##(Smalltalk.MessageSequence) 138 144 34 2 721670 ##(Smalltalk.MessageSend) #createAt:extent: 34 2 610 2719 21 610 611 51 416 2482 #updateSizePosted 688 416 983302 ##(Smalltalk.WINDOWPLACEMENT) 8 #[44 0 0 0 0 0 0 0 1 0 0 0 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 79 5 0 0 10 0 0 0 128 6 0 0 35 0 0 0] 8 #() 610 193 193 nil 27 )! !
+	^#(#'!!STL' 4 788558 10 ##(Smalltalk.STBViewProxy) ##(Smalltalk.Toolbar) 34 25 nil nil 34 2 8 1409288972 131137 416 nil 786694 ##(Smalltalk.ColorDefault) 8 4278190080 nil 517 nil 263174 ##(Smalltalk.Font) nil true 459014 ##(Smalltalk.LOGFONT) 8 #[243 255 255 255 0 0 0 0 0 0 0 0 0 0 0 0 144 1 0 0 0 0 0 0 3 2 1 34 65 114 105 97 108 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0] 328198 ##(Smalltalk.Point) 193 193 nil 416 496 8 1949831345 170 192 8 #() 170 192 34 24 16429 1115206 1 ##(Smalltalk.ToolbarIconButton) 416 1 1180998 4 ##(Smalltalk.CommandDescription) #openPmbook 8 'Open PMBOK' 1 1 263494 3 ##(Smalltalk.Icon) nil true 1572870 ##(Smalltalk.ImageRelativeFileLocator) 8 'papirus-team-app-32.ico' nil 16429 16431 722 416 1 754 #showDefinitionBrowser 8 'PMI Process Browser' 1 1 802 nil true 848 8 'Compiler.ico' 2032142 ##(Smalltalk.STBExternalResourceLibraryProxy) 8 'dolphindr7.dll' nil 16431 16433 722 416 1 754 #openPortfolioBrowser 8 'Portfolio Browser' 1 1 802 nil true 848 8 'Metaclass.ico' 976 16433 16435 722 416 1 754 #browseGroups 8 'Browse Groups' 1 1 802 nil true 848 8 'MethodProtocol.ico' 976 16435 16437 722 416 1 754 #browseAreas 8 'Browse Knowledge Areas' 1 1 802 nil true 848 8 'EnvironmentBrowserShell.ico' 976 16437 16439 722 416 1 754 #browseDeliverables 8 'Browse Deliverables' 1 1 802 nil true 848 5 786694 ##(Smalltalk.ShellLibrary) 16439 16441 722 416 1 754 #browseArtifacts 8 'Browse Artifacts' 1 1 802 nil true 848 8 'MemoryManager.ico' 976 16441 16443 722 416 1 754 #browseTool 8 'Browse Tools and Techniques' 1 1 802 nil true 848 8 'Behavior.ico' 976 16443 16445 722 416 1 754 #showTreeBuilder 8 'Show Tree Builder' 1 1 802 nil true 848 8 'ViewComposer.ico' 976 16445 16447 722 416 1 754 #showMyTrees 8 'Show My Trees' 1 1 802 nil true 848 8 'TreePresenter.ico' 976 16447 16449 722 416 1 754 #openQuizBrowser 8 'Processes Quiz' 1 1 788806 1 ##(Smalltalk.TextTileIcon) $\x2714 8 'Segoe UI Emoji' nil 786694 ##(Smalltalk.IndexedColor) 33554437 nil nil 1 nil nil 16449 16451 722 416 1 754 #openNonQuizBrowser 8 'Non Processes Quiz' 1 1 1714 $\x2611 8 'Segoe UI Emoji' nil 262406 ##(Smalltalk.ARGB) 8 4278216396 nil nil 1 nil nil 16451 34 15 736 1049158 1 ##(Smalltalk.ToolbarSeparator) 416 1 880 1008 1088 1168 1248 1344 1424 1938 416 1 1504 1584 1938 416 1 1664 1792 nil nil 1 nil 610 33 33 610 45 45 nil 656198 1 ##(Smalltalk.FlowLayout) 1 1 1 983302 ##(Smalltalk.MessageSequence) 138 144 34 2 721670 ##(Smalltalk.MessageSend) #createAt:extent: 34 2 610 2111 21 610 611 51 416 2130 #updateSizePosted 672 416 983302 ##(Smalltalk.WINDOWPLACEMENT) 8 #[44 0 0 0 0 0 0 0 1 0 0 0 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 255 31 4 0 0 10 0 0 0 80 5 0 0 35 0 0 0] 8 #() 610 193 193 nil 27 )! !
 !Toolbar class categoriesFor: #resource_PMI_Browser_toolbar!public!resources-views! !
 
 "End of package definition"!
