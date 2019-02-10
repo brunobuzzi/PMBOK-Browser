@@ -155,8 +155,8 @@ removeOutputProcess
 
 resetCustomDrawBlock
 
-	inputProcessesPresenter view columnsList first customDrawBlock: nil.
-	outputProcessesPresenter view columnsList first customDrawBlock: nil.
+	inputProcessesPresenter view columnsList second customDrawBlock: nil.
+	outputProcessesPresenter view columnsList second customDrawBlock: nil.
 	 !
 
 resetTest
@@ -169,8 +169,8 @@ resetTest
 
 runNormalTest
 
-	inputProcessesPresenter view columnsList first customDrawBlock: self getActualDrawBlockForInputProcess.
-	outputProcessesPresenter view columnsList first customDrawBlock: self getActualDrawBlockForOutputProcess.
+	inputProcessesPresenter view columnsList second customDrawBlock: self getActualDrawBlockForInputProcess.
+	outputProcessesPresenter view columnsList second customDrawBlock: self getActualDrawBlockForOutputProcess.
 
 	inputProcessesPresenter view invalidate.
 	outputProcessesPresenter view invalidate.
