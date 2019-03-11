@@ -5,6 +5,9 @@ package paxVersion: 1;
 PMBOKEnglishProcessesBuilderVersion4 new buildPMBOKFromFile: ''C:\Users\Usuario\Documents\GitHub\Dolphin\PMBOK-Browser\pmbok-en-new.obj''.
 PMBOKSpanishProcessesBuilderVersion4 new buildPMBOKFromFile: ''C:\Users\Usuario\Documents\GitHub\Dolphin\PMBOK-Browser\pmbok-sp-new.obj''.
 
+PMBOKEnglishLanguage new setAsDefault.
+
+PMBookLanguage
 To fileout a PMBOK to a file:
 PMBOKEnglishProcessesBuilderVersion4 new fileOutPMBOKToFile: ''pmbok-en-new.obj''.
 PMBOKSpanishProcessesBuilderVersion4 new fileOutPMBOKToFile: ''pmbok-sp-new.obj''.'.

@@ -103,6 +103,10 @@ hasDescriptionText: aString
 !
 
 hasImage
+
+	image ifNil: [(File exists: (self imagePath, 'Proc', self printFileNumber, '.jpg')) 
+			ifTrue: [image := ('Proc', self printFileNumber, '.jpg'). ^true]].
+
 	^image notNil!
 
 image
